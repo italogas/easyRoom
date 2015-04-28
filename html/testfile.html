@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="867802377951-9paj97ri9j6o2u4s2cceas3a1gc7tcv6.apps.googleusercontent.com" />
+    <title>Easy Room</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+        var saySomething = function() {
+            alert("Welcome to EasyRoom!");
+        };
+        gapi.auth2.init().fecth_basic_profile = true;
+        var onSignIn = function (googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+        };
+        var myInfo = function() {
+            alert('ID: ' + profile.getId() + 'Name: ' + profile.getName() +
+                    'Image URL: ' + profile.getImageUrl() + 'Email: ' + profile.getEmail());
+        };
+    </script>
+</head>
+<body style="background-color: lightgrey">
+    <div style="background-color: lightsteelblue">
+        <h1 style="color: dodgerblue; text-align: center">Welcome to EasyRoom!</h1>
+    </div>
+    <div align="center" class="g-signin2" data-onsuccess="onSignIn"> </div>
+    <!-- <div align="center">
+        <input type="button" onclick="myInfo()" value="My Info"
+               style="align-self: center; width: 80px; height: 40px"/>
+    </div> -->
+</body>
+</html>
