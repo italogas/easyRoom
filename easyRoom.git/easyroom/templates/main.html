@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                    <title>Pricing Cloud</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://demo.stiltsoft.com">
+
+<meta id="atlassian-token" name="atlassian-token" content="b140d6adef3feae465690465454dff017e4e7288">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="tblfilter">
+<script type="text/javascript" async="" src="/static/h_files/ga.js"></script><script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1417925914937">
+        
+    
+        
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-keyboardshortcut-hash" content="b8dafe665c6360cceebed7c6777d9de7">
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 170px;}.theme-default .ia-splitter #main {margin-left: 170px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            
+
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="1015810">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-page-title" content="Table Filter Demo">
+            <meta name="ajs-parent-page-id" content="">
+            <meta name="ajs-space-key" content="tblfilter">
+            <meta name="ajs-space-name" content="Confluence Table Filter">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-user-display-name" content="Anonymous">
+            <meta name="ajs-editor.loader.comment.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/9ae394be050e686cf09a812d1cec2dd8/_/download/contextbatch/css/comment-editor/batch.css&quot; media=&quot;all&quot;&gt;
+">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://demo.stiltsoft.com">
+            <meta name="ajs-version-number" content="5.5.1">
+            <meta name="ajs-build-number" content="5509">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="b140d6adef3feae465690465454dff017e4e7288">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-editor.loader.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?media=%28max-width%3A+1450px%29&quot; media=&quot;(max-width: 1450px)&quot;&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/js/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="https://demo.stiltsoft.com/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://demo.stiltsoft.com/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://demo.stiltsoft.com/opensearch/osd.action" title="StiltSoft Demo Confluence">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch(1).css" media="print">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch(2).css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/f050b2648787d397e8c022e9db80d980/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/493c58880d911740eb54977a89326458/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch(3).css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch(4).css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/22df7fb30aef83ff44b33438da122a33/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/60702378f60c255ba1cae837b3880edf/_/download/contextbatch/css/viewcontent,atl.general,main,plugin.quick.comment.pre/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/batch/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources(1).css" media="print">
+<link type="text/css" rel="stylesheet" href="/static/h_files/com.stiltsoft.confluence.plugin.tablefilter.tablefilter-web-resources.css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/h_files/com.atlassian.confluence.plugins.confluence-space-ia-spacesidebar.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/7.0.1/_/download/batch/com.atlassian.confluence.plugins.confluence-space-ia:spacesidebar/com.atlassian.confluence.plugins.confluence-space-ia:spacesidebar.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/com.atlassian.confluence.plugins.confluence-highlight-actions-highlighting-experiment-resources.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1.5/_/download/batch/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/static/h_files/confluence.extra.jira-web-resources-adg.css" media="all">
+<script type="text/javascript" src="/static/h_files/batch.js"></script><style type="text/css"></style>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="/static/h_files/batch(5).js"></script>
+<script type="text/javascript" src="/static/h_files/batch(6).js"></script>
+<script type="text/javascript" src="/static/h_files/batch(7).js"></script>
+<script type="text/javascript" src="/static/h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources.js"></script>
+<script type="text/javascript" src="/static/h_files/com.stiltsoft.confluence.plugin.tablefilter.tablefilter-web-resources.js"></script>
+<script type="text/javascript" src="/static/h_files/com.atlassian.confluence.plugins.confluence-space-ia-soy-resources.js"></script>
+<script type="text/javascript" src="/static/h_files/com.atlassian.confluence.plugins.confluence-space-ia-spacesidebar.js"></script>
+<script type="text/javascript" src="/static/h_files/com.atlassian.confluence.plugins.confluence-highlight-actions-highlighting-experiment-resources.js"></script>
+<script type="text/javascript" src="/static/h_files/com.atlassian.mywork.mywork-confluence-host-plugin-mw-header-anchor.js"></script>
+<link type="text/css" rel="stylesheet" href="/static/h_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="/static/h_files/default-theme.css" media="all">
+
+
+        
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18056811-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    
+                <link rel="canonical" href="/static/h_files/h.html">
+        <link rel="shortlink" href="https://demo.stiltsoft.com/x/AoAP">
+    <meta name="wikilink" content="[tblfilter:Table Filter Demo]">
+    <meta name="page-version" content="26">
+
+<link type="text/css" rel="stylesheet" href="/static/h_files/batch(8).css" media="all"><link type="text/css" rel="stylesheet" href="/static/h_files/batch(9).css" media="(max-width: 1450px)"><!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/5.5.1/_">
+            <meta name="ajs-num-attachments" content="0">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-cancel-button-close-text" content="Close">
+            <meta name="ajs-content-id" content="1015810">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-save-drafts" content="true">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-cancel-button-discard-text" content="">
+            <meta name="ajs-draft-id" content="0">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="1015810">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="page">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-can-send-email" content="false">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default" data-aui-version="5.4.4-CONFDEV-21873">
+
+        
+    <ul id="assistive-skip-links" class="assistive">
+   <!-- <li><a href="http://example.comtitle-heading">Skip to content</a></li>
+    <li><a href="http://example.combreadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="http://example.comheader-menu-bar">Skip to header menu</a></li>
+    <li><a href="http://example.comnavigation">Skip to action menu</a></li>
+    <li><a href="http://example.comquick-search-query">Skip to quick search</a></li>
+--></ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            <!-- Message Banner -->
+
+                            </div>
+    </div>
+    
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://home.example.com/"><img src="/static/h_files/confluence-logo.png" alt="StiltSoft Demo Confluence" data-aui-responsive-header-index="0"></a></h1><ul class="aui-nav" style="width: auto;">
+                            <li>
+            
+        
+        <!--
+<a id="space-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="http://example.com" aria-haspopup="true" aria-owns="space-menu-link-content" title="Spaces"><span class="browse">Spaces</span><span class="aui-icon-dropdown"></span></a><div id="space-menu-link-content" class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" aria-hidden="false"></div>
+        --></li>
+                    <li>
+            
+    
+        
+<a id="people-directory-link" href="/static/pricing_cloud_search2.html" class=" aui-nav-imagelink" title="Precos">
+            <span>Tabela de Preços</span>
+    </a>
+        </li>
+                                            <li style="display: none;"><a id="aui-responsive-header-dropdown-trigger-0" class="aui-dropdown2-trigger" aria-owns="aui-responsive-header-dropdown-content-0" aria-haspopup="true" href="http://example.com">More<span class="icon aui-icon-dropdown"></span></a><div id="aui-responsive-header-dropdown-content-0" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"><ul id="aui-responsive-header-dropdown-list-0"></ul></div></div></li><li>
+            
+    
+            <!--
+<a id="create-page-button" href="https://demo.stiltsoft.com/pages/createpage.action?spaceKey=tblfilter&fromPageId=1015810" class="aui-button aui-style aui-button-primary aui-nav-imagelink" title="Create Content (c)">
+            <span>Create</span> -->
+    </a>
+        </li>
+        </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="http://www.google.com/search?q="><fieldset>
+			<input id="quick-search-query" class="text app-search search quick-search-query" type="text" accesskey="q" autocomplete="off" name="q" title="Digite a busca" placeholder="Search">
+			<input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search">
+			<div class="aui-dd-parent quick-nav-drop-down">
+			</div></fieldset></form>
+    </li>
+        <li>
+            <!--
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="http://example.com" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span>
+    </a>-->
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                    <strong></strong>
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-55/Getting+Help+And+Support" class="interactive" title="Visit the Confluence documentation home" target="_blank">
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+                
+<a id="keyboard-shortcuts-link" href="http://example.com" class="interactive" title="View available keyboard shortcuts (?)">
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="https://demo.stiltsoft.com/dashboard/configurerssfeed.action" class="interactive" title="Create your custom RSS feed.">
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="https://docs.atlassian.com/confluence/docs-55/whatsnew/iframe" class="interactive" title="">
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+                
+<a id="gadget-directory-link" href="http://example.com" class="user-item administration-link  interactive" title="Browse gadgets provided by Confluence">
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="https://demo.stiltsoft.com/aboutconfluencepage.action" class="interactive" title="Get more information about Confluence">
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            </li><li>
+        
+            
+<a id="login-link" href="info.html" class="   user-item login-link " title="">
+        Info
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar" style="width: 170px; visibility: visible; top: 0px; left: 0px;">
+    				
+    
+    			<div class="ia-splitter-handle tipsy-enabled" data-tooltip="Collapse sidebar ( [ )" title=" ([)"><div class="ia-splitter-handle-highlight"></div></div></div>
+    		</div>
+        <!-- \#header -->
+
+        
+        <div id="main" class=" aui-page-panel" style="margin-left: 170px;">
+                <div id="main-header">
+            
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                            <li class="ajs-button normal">
+
+    
+        
+                            
+    
+    <!--
+    <a id="editPageLink" href="https://demo.stiltsoft.com/pages/editpage.action?pageId=1015810" rel="nofollow" class="edit" accesskey="e" title="Edit (e)">
+                <span><u>E</u>dit</span>    </a> -->
+</li>
+                        
+        <li class="normal ajs-menu-item">
+        <a id="add-menu-link" class="add hidden ajs-menu-title aui-dropdown2-trigger" href="http://example.com" aria-haspopup="true" aria-owns="add-menu" data-container="#navigation"><span><span>Add</span></span></a>         <div id="add-menu" class="aui-dropdown2 aui-style-default">
+                            <ul id="add-menu-space" class="section-space first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="createPageLink" href="https://demo.stiltsoft.com/pages/createpage.action?spaceKey=tblfilter&fromPageId=1015810" rel="nofollow" class="add-page" accesskey="p" title="Add a Page">
+                <span>Page</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="createPageLinkTemplate" href="https://demo.stiltsoft.com/pages/createpage-choosetemplate.action?spaceKey=tblfilter&newSpaceKey=tblfilter&fromPageId=1015810" rel="nofollow" class="add-page-template" accesskey="p" title="Add a Page using a template">
+                <span>Page from template</span>    </a>
+</li>
+                                </ul>
+                            <ul id="add-menu-page" class="section-page aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="add-comment-menu-link" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo?showComments=true&showCommentArea=true#addcomment" rel="nofollow" class="add-comment" title="Add a Comment">
+                <span>Comment</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="add-attachment-link" href="https://demo.stiltsoft.com/pages/viewpageattachments.action?pageId=1015810" rel="nofollow" class="add-attachment" accesskey="t" title="Add an Attachment">
+                <span>Attachment</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+                    
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action ajs-menu-title aui-dropdown2-trigger" href="http://example.com" aria-haspopup="true" aria-owns="action-menu" data-container="#navigation"><span><span></span><!-- Tools--></span></a>         <div id="action-menu" class="aui-dropdown2 aui-style-default most-right-menu-item">
+                            <ul id="action-menu-primary" class="section-primary first aui-dropdown2-section">
+ 
+                            
+    
+    
+    <a id="example" href="example.html"  title="">
+                <span>Opcoes Menu..</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                    
+                
+        <li class="first">
+                
+<!--
+                    <span class=""><a href="https://demo.stiltsoft.com/collector/pages.action?key=tblfilter&src=breadcrumbs-collector">Pages</a></span>
+    -->            </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="http://example.compage-banner-end" class="assistive">Skip to end of banner</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner" style="visibility: visible;"><ul class="banner"><li id="system-content-items" class="noprint hidden"><a href="" title="Restrictions apply" id="content-metadata-page-restrictions" class="hidden"><img class="page-banner-item-icon" src="/static/h_files/red_padlock.png" style="height: 16px; width: 16px;"></a></li><li class="page-metadata-item noprint has-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><img class="page-banner-item-icon" src="/static/h_files/icon-jira-link.png" style="height: 16px; width: 16px;"><span>JIRA links</span></a></li></ul></div>
+            
+
+<a href="http://example.compage-banner-start" class="assistive">Go to start of banner</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="/static/pricing_cloud_search2.html">Questionário extração de requisitos para implantação do e-cidade/Urbem</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+
+
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+        <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<!--
+<a id="icon-talk-insert" href="http://example.comlink" class="gd-comment-icon gd-comment-icon-active gd-comment-icon-insert" data-content-id="1015810" style="top: 2750px; left: 403px;"></a></body>
+-->
+<div class="tablefilter-outer-wrapper">
+    
+    <div id="comboBoxDiv-TABLE_ID629376224_90549309" class="tableFilterCbStyle">
+	
+			     
+        <form class="aui">
+               
+				 
+				 <head>  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.1.min.js"></script>  
+<script type="text/javascript">  
+$(document).ready(function(){  
+	id= 0;
+	screen_4 = true;
+	final_soft = "Urbem";
+	final_cloud = "public";
+	
+    var input = ['<div id="1"><p></br></br>&nbsp;&nbsp;1- A prefeitura possui disponibilidade financeira para implantar uma solução em TI? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></br> \
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  <body><form><input type="radio" name="c1" value="nao">Não<br><input type="radio" name="c1" value="sim1" checked>Sim, podemos arcar com os custos de uma solução customizada.<br><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="radio" name="c1" value="sim2">Sim, mas são poucos e precisamos de uma solução de baixo custo.</form> </body>\
+					</br></br></br></br></br></br></br> </div>',
+				'<div id="2"><p></br></br>&nbsp;&nbsp;2- A prefeitura possui equipe de TI capacitada? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></br>	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  <body><form><input type="radio" name="c2" value="nao" >Não<br><input type="radio" name="c2" value="sim1" checked>Sim<br></form> </body>\
+					</br></br></br></br></br></br></br></br> </div>',
+				'<div id="3"><p></br> \
+					</br>&nbsp;&nbsp;3- A prefeitura possui infraestrutura de rede?<p> \
+					</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1- Possui equipamentos, computadores? \
+					</p></br>	 	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>    <select id="c31" class="select" name="100" style="width: 150px;"> <option value="0" selected="selected"   >Sim </option>     <option value="1"    >Não  </option> </select> </p></p>	 \
+					</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.2- Possui acesso a internet? \
+					</p></br>	 	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>    <select id="c32" class="select" name="100" style="width: 150px;"> <option value="0" selected="selected"   >Sim </option>     <option value="1"    >Não  </option> </select> 	\
+					</br></br></div>',
+				'<div id="4"><p></br></br>&nbsp;&nbsp;4- A equipe de TI da prefeitura possui algum provedor de seviços em nuvem Openstack, </br> a exemplo do Sepro?\
+				</p></br>	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  <body><form><input type="radio" name="c4" value="nao" checked>Não<br>\
+				<input type="radio" name="c4" value="sim1">Sim, e gostaríamos de implantar a solução em TI no Openstack. <br> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> \
+				<input type="radio" name="c4" value="sim2">Sim, mas preferimos uma solução em TI para uma plataforma paga. <br> </form> </body>\
+					</br></br></br></br></br></br></br></br> </div>',
+				'<div id="5"><p></br></br>&nbsp;&nbsp;5- Que áreas da sua prefeitura gostaria de informatizar? </p></br>	<label>\
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  <body><form> \
+					<form action=""> \
+						<input type="checkbox" name="c5" \
+						value="1">Educação&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+						<input type="checkbox" name="c5" value="2">Saúde<br> \
+						<input type="checkbox" name="c5" \
+						value="3">Financeira&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+						<input type="checkbox" name="c5" value="4">Patrimonial<br><label>\
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> <input type="checkbox" name="c5" \
+						value="5">Tributária&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+						<input type="checkbox" name="c5" value="6">Recursos Humanos<br> <input type="checkbox" name="c5"\
+						value="7">Administrativa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+						<input type="checkbox" name="c5" value="8">Prestação de Contas<br></form> </body>\
+											</br></br></br></br></br></br></br></br> </div>',
+				'<div id="6"><p></br> \
+					</br>&nbsp;&nbsp;6- Qual o número de habitantes do município em que será implantada a solução de TI?<p> \
+					</p></br>	 	<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  \
+					<select id="c6" class="select" name="100" style="width: 180px;"> <option value="0" selected="selected"   >Até 2.000 </option> \
+					    <option value="1"    > de 2.001 até 5.000  </option> </p></p>	 \
+					 <option value="2"   >de 5.001 até 10.000&nbsp;&nbsp; </option> \
+					    <option value="3"    > de 10.001 até 20.000  </option></p></p>	 \
+					 <option value="4"    > de 20.001 até 50.000 </option> \
+					    <option value="5"    > de 50.001 até 100.000  </option> </p></p>	 \
+					    <option value="6"    > de 100.001 até 500.000 </option> </p></p>	 \
+					    <option value="7"    >Acima de 500.000 </option> </select> </p></p>	 \
+					</br></br></br></br></br></br></div>',
+					
+				'<div id="7"><p></br> \<table> <caption style="font-weight:bold">Solução em TI recomendada</caption> \
+					<th talk-marker="83" class="confluenceTh sortableHeader"> Ambiente</th> \
+					<th talk-marker="83" class="confluenceTh sortableHeader"> Software</th> \
+					<th talk-marker="83" class="confluenceTh sortableHeader"> Link para o template </th> \
+					<tr class=alternate2>\
+					<td talk-marker="91" class="confluenceTd"><p talk-marker="92"><a href="https://www.openstack.org/" >\
+					<img src="/static/_cloud_.jpg" /></a></p></td> \
+					<td talk-marker="91" class="confluenceTd"><p talk-marker="92"><a href="_linksoft_" >\
+					<img src="/static/_soft_.jpg" /></a></p></td>  \
+					<td talk-marker="91" class="confluenceTd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.linktamplate.com/" > Download </a> </td> </tr></table> </div>'
+				]
+					
+	var exits = ['<div id="2"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+      Busque um banco de fomento e faça um financiamento para esse fim. Financiamento com </br> \
+	&nbsp;o BNDES Informações sobre o PMAT (Programa de Modernização da Administração Tributária e </br> \
+	&nbsp;Gestão dos Setores Sociais Básicos) podem ser encontradas no endereço: www.bndes.gov.br/</br>\
+	&nbsp;SiteBNDES/bndes/bndes_pt/Institucional/Apoio_Financeiro/Programas_e_Fundos/PMAT/pmat.html </br>\
+	&nbsp;Financiamento com a Caixa Econômica Federal Seu Município também poderá obter o financiamento</br>\
+	&nbsp;para fortalecer e modernizar a gestão com a Caixa Econômica Federal. Para isto basta procurar</br>\
+	&nbsp;a Superintendência Regional que atende o seu município. Maiores informações no site: www.caixa.gov.br, </br>\
+	aba Governo.</br></br></br></br></br></br></br>\
+	</label>   </br></br></br></br></br></br></br></br></br></div>', 
+				'<div id="3"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+		  Contrate um prestador de serviços para treinar e capacitar os seus </br> \
+	servidores. Isso trará autonomia para a prefeitura na hora de instalar os </br> \
+	programas e solucionar eventuais problemas de uso da Tecnologia da Informação. </br> \
+	No portal, você encontra uma lista de empresas especializadas e consultores </br> \
+	prontos para lhe atender. Acesse: www.mercadopublico.gov.br.\
+	</label>   </br></br></br></br></br></br></br></br></br></br></br></br></br></br></div>', 
+				'<div id="4"><label></br></br></br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+		  Para que possa prosseguir e visualizar as soluções em TI disponpiveis, </br> \
+	recomendamos a contratação de um provedor de Internet para a prefeitura ter</br> \
+	 acesso aos programas, fóruns de discussão e bate-papos, o que irá facilitar</br> \
+	programas e solucionar eventuais problemas de uso da Tecnologia da Informação. </br> \
+	</label>   </br> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></div>',
+				'<div id="4"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+		  É possível implantar o software público em servidor interno, mas para baixar </br> \
+	os programas é necessário acesso à Internet, nesse caso recomendamos a prefeitura </br> \
+	procurar um provedor de internet para que possa prosseguir e visualizar as soluções</br> \
+	em TI disponpiveis.</br> \
+	</label>   </br></br></br></br></br> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></div>' ,
+				'<div id="4"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \
+		  Com o acesso a Internet, sua prefeitura já pode começar a usufruir dos softwares</br> \
+	públicos. Os softwares podem ser utilizados via web, o que possibilita ao prefeito e aos</br> \
+	servidores acessarem os serviços e os dados do município de qualquer lugar. A prefeitura</br> \
+	 pode contratar um serviço para hospedagem externa do sistema escolhido. </br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+		Ao optar pela terceirização, o prestador do serviço fica responsável pela manutenção </br> \
+	do ambiente e atualização dos equipamentos.</br> \
+	</label>   </br></br></br></br></br> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></div>' 
+		 
+	
+	];
+		
+		
+	var myFuncs = {
+		show_hide_button: function() {
+		if (id <= 1)
+			{$("#voltar").hide();}
+			else{$("#voltar").show();}
+		},
+		
+		next: function() {
+		   $('#'+id).remove();				
+		   $('#inputs_adicionais').append( input[id] ); 			
+			id+=1; 			
+		   myFuncs.show_hide_button();
+			
+		},
+		
+		back: function() {
+			$("#avancar").show();
+		
+			if (id > 1){
+			   $('#'+id).remove();						
+				id-=2;		  
+				if (screen_4 == false && id ==3){
+					id=2;
+					screen_4 = true;
+				}
+				$('#inputs_adicionais').append( input[id] ); 			
+				id+=1; 
+			
+				myFuncs.show_hide_button();
+			}
+		},
+			
+			c1: function() {
+				var op = $('input[name="c1"]:checked').val();	
+				if (op == "nao"){				
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append( exits[id-1] ); 			
+					id+=1; 		
+					$("#avancar").hide();
+					
+			if (id <= 1)
+			{$("#voltar").hide();}
+			else{$("#voltar").show();}
+			}
+				else {myFuncs.next();}
+			},
+			c2: function() {
+				var op = $('input[name="c2"]:checked').val();	
+				if (op == "nao"){				
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append( exits[id-1] ); 			
+					id+=1; 	
+					$("#avancar").hide();	
+			}
+				else {myFuncs.next();}
+			},
+			c3: function() {
+				var c1 = document.getElementById("c31");
+				var c2 = document.getElementById("c32");
+				var v1 = c1.options[c1.selectedIndex].value;	
+				var v2 = c2.options[c2.selectedIndex].value;	
+				
+				if (v1 == 1 && v2 == 1){	
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append( exits[id-1] ); 			
+					id+=1; 	
+					$("#avancar").hide();	
+					
+				}else if (v1 == 0 && v2 == 1){
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append( exits[id] ); 			
+					id+=1; 	
+					$("#avancar").hide();	
+				
+				}else if (v1 == 1 && v2 == 0){
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append( exits[id+1] ); 			
+					id+=1; 	
+					screen_4 = false;
+				
+				}else {
+				myFuncs.next();}
+			},
+			c4: function() {
+				var op = $('input[name="c4"]:checked').val();
+				if (op == 'sim1'){
+					final_cloud = 'private';
+				}else{
+					final_cloud = 'public';				
+				}	
+				//window.alert(op);
+				myFuncs.next();
+			},
+			c5: function() {
+				var checkedValues = ($('input[name="c5"]:checked').map(function() {
+					return this.value;
+				}).get()+"").split(',');
+				if (checkedValues == ''){
+					window.alert('Escolha ao menos uma área a ser informatizada.');					
+				} else if ($.inArray('1', checkedValues) == 0 || $.inArray('2', checkedValues) == 0){
+					final_soft = "e-cidade";
+					myFuncs.next();
+				}else{
+					final_soft = "Urbem";
+					myFuncs.next();
+				}
+			},
+			c6: function() {
+				if (final_cloud == 'private'){
+					final_exit = input[6].replace("_cloud_", "OpenStack").replace("_soft_", final_soft);
+					if (final_soft == "e-cidade"){
+						final_exit = final_exit.replace("_linksoft_", "http://www.softwarepublico.gov.br/ver-comunidade?community_id=15315976");
+					}else{
+						final_exit = final_exit.replace("_linksoft_", "http://www.urbem.cnm.org.br");					
+					}
+				   $('#'+id).remove();				
+				   $('#inputs_adicionais').append(final_exit ); 			
+					id+=1; 			
+				   myFuncs.show_hide_button();
+			   
+			   }else{
+					if (final_soft == "e-cidade"){
+						window.open("./pricingcloud?so=Linux&mem=4&storage=200&soft=e-cidade", "_self");
+					} else {window.open("./pricingcloud?so=Linux&mem=4&storage=40&soft=Urbem", "_self");}
+				}
+			}
+			
+			
+};	
+	var array_of_functions = [myFuncs.c1, myFuncs.c2, myFuncs.c3, myFuncs.c4, myFuncs.c5, myFuncs.c6];
+					
+	myFuncs.next();
+    $("input[name='add']").click(function( e ){  
+		array_of_functions[id-1]();
+    });  
+    $("input[name='back']").click(function( e ){  
+		myFuncs.back();
+    });  
+ 
+    $('#inputs_adicionais').delegate('a','click',function( e ){  
+        e.preventDefault();  
+        $( this ).parent('label').remove();  
+    });  
+ 
+});  
+</script>  
+</head>  
+<body>  
+    <form action="" method="post">   
+	    <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <fieldset id="inputs_adicionais" style="border: none">  
+        </fieldset>  
+    </form>  
+	
+    <form action="" method="post">   
+	</p></p>	</p></p>	</p></p>	</p></p>	</p></p>	
+	
+	<label>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	</label>	
+	<label style="display: block" ><input type="button" style="display: none;" name="back" id="voltar" value="<< Voltar">
+	</label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</label>
+        <label style="display: block"><input type="button" name="add" id="avancar" value="Avançar >>" /></label> 
+      
+        </fieldset>  
+                    </form>
+</body> 
+				 
+            </div>  <p></br></br></p></p>	 <p></br></br></p></p>	 <p></br></br></p></p>	 	
+<div class="tableFilterCbStyle">
+	<form>
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <fieldset id="inputs_saida" style="border: none">  
+	</form>
+     </div>  
+       
+    
+
+	</div>
+    </div>
+
+    <script type="text/javascript">
+        
+    </script>
+
+</div>
+
+
+</html>

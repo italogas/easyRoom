@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+                    <title>Oops - an error has occurred - StiltSoft Demo Confluence</title>
+    
+        
+
+                        
+    
+                        
+    
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://demo.stiltsoft.com">
+
+<meta id="atlassian-token" name="atlassian-token" content="b140d6adef3feae465690465454dff017e4e7288">
+
+<script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noarchive">
+        
+    
+        
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-keyboardshortcut-hash" content="b8dafe665c6360cceebed7c6777d9de7">
+            
+
+    
+            
+    
+    
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://demo.stiltsoft.com">
+            <meta name="ajs-version-number" content="5.5.1">
+            <meta name="ajs-build-number" content="5509">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="b140d6adef3feae465690465454dff017e4e7288">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-editor.loader.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/ca0cd20469833e81f13e6122f5a3435f/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1fde2a3a51ca1c5ad0e05e2769fe19de/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-atl.general/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/ca0cd20469833e81f13e6122f5a3435f/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1fde2a3a51ca1c5ad0e05e2769fe19de/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-atl.general/batch.css?media=%28max-width%3A+1450px%29&quot; media=&quot;(max-width: 1450px)&quot;&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/ca0cd20469833e81f13e6122f5a3435f/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1fde2a3a51ca1c5ad0e05e2769fe19de/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-atl.general/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/s/ca0cd20469833e81f13e6122f5a3435f/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1fde2a3a51ca1c5ad0e05e2769fe19de/_/download/contextbatch/js/editor,macro-browser,fullpage-editor,-atl.general/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/osd.action" title="StiltSoft Demo Confluence"/>
+
+<link type="text/css" rel="stylesheet" href="/s/1d578e293e73176df5fadf4660111339/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?media=print" media="print">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/5bdcaf12b485d9700acfbbfd78ede74f/_/download/contextbatch/css/main/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d4e8008eaffc83bd20bfabf58700657e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/d7b7b0e61074bf64be57892c534d49ff/_/download/contextbatch/css/atl.general/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/5.5.4/_/download/batch/confluence.extra.jira:web-resources-adg/confluence.extra.jira:web-resources-adg.css" media="all">
+<script type="text/javascript" src="/s/b35d5544cfc6706f9e0b93a44040cbd6/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/js/batch.js" ></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/5bdcaf12b485d9700acfbbfd78ede74f/_/download/contextbatch/js/main/batch.js" ></script>
+<script type="text/javascript" src="/s/d4e8008eaffc83bd20bfabf58700657e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/d7b7b0e61074bf64be57892c534d49ff/_/download/contextbatch/js/atl.general/batch.js" ></script>
+<script type="text/javascript" src="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.0.3/_/download/batch/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor.js" ></script>
+<link type="text/css" rel="stylesheet" href="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/4/_/styles/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+
+
+        
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18056811-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    
+</head>
+
+<body             onload="placeFocus()"
+     id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">Skip to content</a></li>
+    <li><a href="#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="#navigation">Skip to action menu</a></li>
+    <li><a href="#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            <!-- Message Banner -->
+<div id="stiltsoft-banner" style="background-color: #97D071; bold; padding: 4px; font-weight: bold; text-align: center;">
+In order to use the plugins please login as a 
+<a href="https://demo.stiltsoft.com?os_username=guest1&os_password=guest1">Guest</a>
+</div>
+                            </div>
+    </div>
+    
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="/"><img src="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/images/logo/confluence-logo.png" alt="StiltSoft Demo Confluence" /></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a  id="space-directory-link" href="/spacedirectory/view.action"  class=" aui-nav-imagelink"   title="Spaces">
+            <span>Spaces</span>
+    </a>
+        </li>
+                    <li>
+            
+    
+        
+<a  id="people-directory-link" href="/peopledirectory.action"  class=" aui-nav-imagelink"   title="People">
+            <span>People</span>
+    </a>
+        </li>
+                                            <li>
+            
+    
+            
+<a  id="create-page-button" href="#"  class="aui-button aui-style aui-button-primary aui-nav-imagelink"   title="Create Content">
+            <span>Create</span>
+    </a>
+        </li>
+        </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="/dosearchsite.action" method="get"><fieldset><label for="quick-search-query" class="assistive">Quick Search</label><input id="quick-search-query" class="text app-search search quick-search-query" type="text" accessKey="q" autocomplete="off" name="queryString" title="Quick Search" placeholder="Search" /><input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search"/><div class="aui-dd-parent quick-nav-drop-down"></div></fieldset></form>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                    <strong></strong>
+                                <ul  id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a  id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-55/Getting+Help+And+Support" class="    "      title="Visit the Confluence documentation home"  target="_blank"
+>
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="keyboard-shortcuts-link" href="#" class="    "      title="View available keyboard shortcuts" >
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="feed-builder-link" href="/dashboard/configurerssfeed.action" class="    "      title="Create your custom RSS feed." >
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="whats-new-menu-link" href="https://docs.atlassian.com/confluence/docs-55/whatsnew/iframe" class="    "      title="" >
+        What?s new
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="gadget-directory-link" href="#" class="   user-item administration-link "      title="Browse gadgets provided by Confluence" >
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="confluence-about-link" href="/aboutconfluencepage.action" class="    "      title="Get more information about Confluence" >
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a  id="login-link" href="/login.action?os_destination=%2F500page.jsp%3Fid%3D1593867449" class="   user-item login-link "      title="" >
+        Log in
+</a>
+</li>
+                        
+    </li>
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+
+        <!-- \#header -->
+
+        
+        <div id="main" class=" aui-page-panel">
+                <div id="main-header">
+            
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+                    </div>
+                
+                
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                Oops - an error has occurred
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+<div id="PageContent">
+<h1>
+    <a href="/">
+            <img src="/images/logo/confluence_48_white.png" alt="logo" title="Confluence">
+    </a>
+    System Error
+</h1>
+
+<div id="sysErrPanel" class="panel">
+    <p>
+        A system error has occurred &mdash; our apologies!
+    </p>
+    <p>
+        For immediate troubleshooting, consult our <strong><a href="http://confluence.atlassian.com/display/CONFKB/Confluence+Knowledge+Base+Home">knowledge base</a></strong> for a solution.
+    </p>
+    <p>
+        If you would like to receive support from Atlassian's support team, ask your
+        <strong><a href="/contactadministrators.action">Confluence administrator</a></strong> to create a support issue on <a href="http://support.atlassian.com">Atlassian's support system</a> with the following information:
+    </p>
+    <ol>
+        <li>a description of your problem and what you were doing at the time it occurred</li>
+        <li>a copy of the error and system information found below</li>
+        <li>a copy of the application logs (if possible).</li>
+    </ol>
+    <p>
+        Your Confluence administrator can use the
+        <strong><a href="/admin/raisesupportrequest.action">support request form</a></strong>
+        to create a support ticket which will include this information.
+    </p>
+    <p>
+        We will respond as promptly as possible.<br>
+        Thank you!
+    </p>
+    <p>
+        <a href="/"><strong>Return to site homepage&hellip;</strong></a>
+    </p>
+</div>
+
+        
+
+    
+
+    <h3>Cause</h3>
+    
+
+        <h4>Stack Trace:<span class="switch" id="stacktrace-switch" onclick="toggle('stacktrace')">[hide]</span></h4>
+
+        
+        <pre id="stacktrace">
+        </pre>
+        
+
+        <h3>Referer URL</h3>
+        <p>Unknown</p>
+
+        
+</div>
+
+    </div><!-- \#main -->
+        
+    
+        
+            
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link">Atlassian Confluence</a> <span id='footer-build-information'>5.5.1</span>, <a href="http://www.atlassian.com/software/confluence/overview/team-collaboration-software?utm_source=confluence-footer" class="hover-footer-link">Team Collaboration Software</a></li>
+            <li class="print-only">Printed by Atlassian Confluence 5.5.1, Team Collaboration Software.</li>
+            <li class="noprint"><a href="https://jira.atlassian.com/browse/CONF" class="hover-footer-link">Report a bug</a></li>
+            <li class="noprint"><a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link">Atlassian News</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+
+                    <script type="text/javascript">
+$(document).ready(function() {
+  $("div#action-menu li > a:contains('Disable InPlace Editor')").parent().hide();
+});
+(function() {
+    AJS.$(document).ready(function() {
+        if (AJS.Meta.get('remote-user') != '') {
+            AJS.$('#stiltsoft-banner').remove();
+        }
+    });
+} ());
+</script>
+        
+    </section>
+</div>
+
+            
+    
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+</body>
+</html>

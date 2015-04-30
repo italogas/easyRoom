@@ -1,0 +1,13 @@
+/* module-key = 'com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources', location = 'css/talk-print.css' */
+.gd-comments-sidebar {
+    display: none;
+}
+
+.gd-comment-icon {
+    display: none;
+}
+
+.gd-content-offset {
+    padding-right: 0;
+}
+
