@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                    <title>Table Filter Demo - Confluence Table Filter - StiltSoft Demo Confluence</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://demo.stiltsoft.com">
+
+<meta id="atlassian-token" name="atlassian-token" content="b140d6adef3feae465690465454dff017e4e7288">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="tblfilter">
+<script type="text/javascript" async="" src="./h_files/ga.js"></script><script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1417925914937">
+        
+    
+        
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-keyboardshortcut-hash" content="b8dafe665c6360cceebed7c6777d9de7">
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            
+
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="1015810">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-page-title" content="Table Filter Demo">
+            <meta name="ajs-parent-page-id" content="">
+            <meta name="ajs-space-key" content="tblfilter">
+            <meta name="ajs-space-name" content="Confluence Table Filter">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-user-display-name" content="Anonymous">
+            <meta name="ajs-editor.loader.comment.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/9ae394be050e686cf09a812d1cec2dd8/_/download/contextbatch/css/comment-editor/batch.css&quot; media=&quot;all&quot;&gt;
+">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://demo.stiltsoft.com">
+            <meta name="ajs-version-number" content="5.5.1">
+            <meta name="ajs-build-number" content="5509">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="b140d6adef3feae465690465454dff017e4e7288">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-editor.loader.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?media=%28max-width%3A+1450px%29&quot; media=&quot;(max-width: 1450px)&quot;&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/js/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="https://demo.stiltsoft.com/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://demo.stiltsoft.com/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://demo.stiltsoft.com/opensearch/osd.action" title="StiltSoft Demo Confluence">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+<link type="text/css" rel="stylesheet" href="./h_files/batch.css" media="all">
+<link type="text/css" rel="stylesheet" href="./h_files/batch(1).css" media="print">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/batch(2).css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/f050b2648787d397e8c022e9db80d980/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/493c58880d911740eb54977a89326458/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/batch(3).css" media="all">
+<link type="text/css" rel="stylesheet" href="./h_files/batch(4).css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/22df7fb30aef83ff44b33438da122a33/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/60702378f60c255ba1cae837b3880edf/_/download/contextbatch/css/viewcontent,atl.general,main,plugin.quick.comment.pre/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/batch/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources(1).css" media="print">
+<link type="text/css" rel="stylesheet" href="./h_files/com.stiltsoft.confluence.plugin.tablefilter.tablefilter-web-resources.css" media="all">
+<link type="text/css" rel="stylesheet" href="./h_files/com.atlassian.confluence.plugins.confluence-space-ia-spacesidebar.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/7.0.1/_/download/batch/com.atlassian.confluence.plugins.confluence-space-ia:spacesidebar/com.atlassian.confluence.plugins.confluence-space-ia:spacesidebar.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/com.atlassian.confluence.plugins.confluence-highlight-actions-highlighting-experiment-resources.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/8f162ea7c08f102f59e69c86d0b99092/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/1.5/_/download/batch/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources/com.atlassian.confluence.plugins.confluence-highlight-actions:highlighting-experiment-resources.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./h_files/confluence.extra.jira-web-resources-adg.css" media="all">
+<script type="text/javascript" src="./h_files/batch.js"></script><style type="text/css"></style>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/s/d41d8cd98f00b204e9800998ecf8427e/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/69/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="./h_files/batch(5).js"></script>
+<script type="text/javascript" src="./h_files/batch(6).js"></script>
+<script type="text/javascript" src="./h_files/batch(7).js"></script>
+<script type="text/javascript" src="./h_files/com.stiltsoft.confluence.talk.confluence-talk-plugin-talk-resources.js"></script>
+<script type="text/javascript" src="./h_files/com.stiltsoft.confluence.plugin.tablefilter.tablefilter-web-resources.js"></script>
+<script type="text/javascript" src="./h_files/com.atlassian.confluence.plugins.confluence-space-ia-soy-resources.js"></script>
+<script type="text/javascript" src="./h_files/com.atlassian.confluence.plugins.confluence-space-ia-spacesidebar.js"></script>
+<script type="text/javascript" src="./h_files/com.atlassian.confluence.plugins.confluence-highlight-actions-highlighting-experiment-resources.js"></script>
+<script type="text/javascript" src="./h_files/com.atlassian.mywork.mywork-confluence-host-plugin-mw-header-anchor.js"></script>
+<link type="text/css" rel="stylesheet" href="./h_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="./h_files/default-theme.css" media="all">
+
+
+        
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18056811-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+    
+                <link rel="canonical" href="./h_files/h.html">
+        <link rel="shortlink" href="https://demo.stiltsoft.com/x/AoAP">
+    <meta name="wikilink" content="[tblfilter:Table Filter Demo]">
+    <meta name="page-version" content="26">
+
+<link type="text/css" rel="stylesheet" href="./h_files/batch(8).css" media="all"><link type="text/css" rel="stylesheet" href="./h_files/batch(9).css" media="(max-width: 1450px)"><!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/aa9e0bf3bc7c90d1e92e617cc08c045a/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/f6dd0cfccbceea1392993cd36b893ed1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent,-atl.general/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/5.5.1/_">
+            <meta name="ajs-num-attachments" content="0">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-cancel-button-close-text" content="Close">
+            <meta name="ajs-content-id" content="1015810">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-save-drafts" content="true">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-cancel-button-discard-text" content="">
+            <meta name="ajs-draft-id" content="0">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="1015810">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="page">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-can-send-email" content="false">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default" data-aui-version="5.4.4-CONFDEV-21873">
+
+        
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#title-heading">Skip to content</a></li>
+    <li><a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#navigation">Skip to action menu</a></li>
+    <li><a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            <!-- Message Banner -->
+
+                            </div>
+    </div>
+    
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://demo.stiltsoft.com/"><img src="./h_files/confluence-logo.png" alt="StiltSoft Demo Confluence" data-aui-responsive-header-index="0"></a></h1><ul class="aui-nav" style="width: auto;">
+                            <li>
+            
+        
+        
+<a id="space-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" aria-haspopup="true" aria-owns="space-menu-link-content" title="Spaces"><span class="browse">Spaces</span><span class="aui-icon-dropdown"></span></a><div id="space-menu-link-content" class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" aria-hidden="false"></div>
+        </li>
+                    <li>
+            
+    
+        
+<a id="people-directory-link" href="https://demo.stiltsoft.com/peopledirectory.action" class=" aui-nav-imagelink" title="People">
+            <span>People</span>
+    </a>
+        </li>
+                                            <li style="display: none;"><a id="aui-responsive-header-dropdown-trigger-0" class="aui-dropdown2-trigger" aria-owns="aui-responsive-header-dropdown-content-0" aria-haspopup="true" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#">More<span class="icon aui-icon-dropdown"></span></a><div id="aui-responsive-header-dropdown-content-0" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"><ul id="aui-responsive-header-dropdown-list-0"></ul></div></div></li><li>
+            
+    
+            
+<a id="create-page-button" href="https://demo.stiltsoft.com/pages/createpage.action?spaceKey=tblfilter&fromPageId=1015810" class="aui-button aui-style aui-button-primary aui-nav-imagelink" title="Create Content (c)">
+            <span>Create</span>
+    </a>
+        </li>
+        </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="https://demo.stiltsoft.com/dosearchsite.action" method="get"><fieldset><label for="quick-search-query" class="assistive">Quick Search</label><input id="quick-search-query" class="text app-search search quick-search-query" type="text" accesskey="q" autocomplete="off" name="queryString" title="Quick Search (/or g , g)" placeholder="Search"><input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search"><div class="aui-dd-parent quick-nav-drop-down"></div></fieldset></form>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                    <strong></strong>
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-55/Getting+Help+And+Support" class="interactive" title="Visit the Confluence documentation home" target="_blank">
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+                
+<a id="keyboard-shortcuts-link" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" class="interactive" title="View available keyboard shortcuts (?)">
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="https://demo.stiltsoft.com/dashboard/configurerssfeed.action" class="interactive" title="Create your custom RSS feed.">
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="https://docs.atlassian.com/confluence/docs-55/whatsnew/iframe" class="interactive" title="">
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+                
+<a id="gadget-directory-link" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" class="user-item administration-link  interactive" title="Browse gadgets provided by Confluence">
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="https://demo.stiltsoft.com/aboutconfluencepage.action" class="interactive" title="Get more information about Confluence">
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            </li><li>
+        
+            
+<a id="login-link" href="https://demo.stiltsoft.com/login.action?os_destination=%2Fdisplay%2Ftblfilter%2FTable%2BFilter%2BDemo" class="   user-item login-link " title="">
+        Info
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar" style="width: 285px; visibility: visible; top: 0px; left: 0px;">
+    				
+    
+    			<div class="ia-splitter-handle tipsy-enabled" data-tooltip="Collapse sidebar ( [ )" title=" ([)"><div class="ia-splitter-handle-highlight"></div></div></div>
+    		</div>
+        <!-- \#header -->
+
+        
+        <div id="main" class=" aui-page-panel" style="margin-left: 285px;">
+                <div id="main-header">
+            
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                            <li class="ajs-button normal">
+
+    
+        
+                            
+    
+    
+    <a id="editPageLink" href="https://demo.stiltsoft.com/pages/editpage.action?pageId=1015810" rel="nofollow" class="edit" accesskey="e" title="Edit (e)">
+                <span><u>E</u>dit</span>    </a>
+</li>
+                        
+        <li class="normal ajs-menu-item">
+        <a id="add-menu-link" class="add hidden ajs-menu-title aui-dropdown2-trigger" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" aria-haspopup="true" aria-owns="add-menu" data-container="#navigation"><span><span>Add</span></span></a>         <div id="add-menu" class="aui-dropdown2 aui-style-default">
+                            <ul id="add-menu-space" class="section-space first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="createPageLink" href="https://demo.stiltsoft.com/pages/createpage.action?spaceKey=tblfilter&fromPageId=1015810" rel="nofollow" class="add-page" accesskey="p" title="Add a Page">
+                <span>Page</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="createPageLinkTemplate" href="https://demo.stiltsoft.com/pages/createpage-choosetemplate.action?spaceKey=tblfilter&newSpaceKey=tblfilter&fromPageId=1015810" rel="nofollow" class="add-page-template" accesskey="p" title="Add a Page using a template">
+                <span>Page from template</span>    </a>
+</li>
+                                </ul>
+                            <ul id="add-menu-page" class="section-page aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="add-comment-menu-link" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo?showComments=true&showCommentArea=true#addcomment" rel="nofollow" class="add-comment" title="Add a Comment">
+                <span>Comment</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="add-attachment-link" href="https://demo.stiltsoft.com/pages/viewpageattachments.action?pageId=1015810" rel="nofollow" class="add-attachment" accesskey="t" title="Add an Attachment">
+                <span>Attachment</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+                    
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action ajs-menu-title aui-dropdown2-trigger" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#" aria-haspopup="true" aria-owns="action-menu" data-container="#navigation"><span><span>Tools</span></span></a>         <div id="action-menu" class="aui-dropdown2 aui-style-default most-right-menu-item">
+                            <ul id="action-menu-primary" class="section-primary first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="view-attachments-link" href="https://demo.stiltsoft.com/pages/viewpageattachments.action?pageId=1015810" rel="nofollow" class="action-view-attachments" accesskey="t" title="View Attachments (t)">
+                <span>A<u>t</u>tachments (0)</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-view-history-link" href="https://demo.stiltsoft.com/pages/viewpreviousversions.action?pageId=1015810" rel="nofollow" class="action-view-history" title="">
+                <span>Page History</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-page-permissions-link" href="https://demo.stiltsoft.com/pages/viewinfo.action?pageId=1015810" rel="nofollow" class="action-page-permissions" title="Edit restrictions">
+                <span>Restrictions</span>    </a>
+</li>
+                                </ul>
+                            <ul id="action-menu-secondary" class="section-secondary aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="view-page-info-link" href="https://demo.stiltsoft.com/pages/viewinfo.action?pageId=1015810" rel="nofollow" class="action-view-info" title="">
+                <span>Page Information</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="link-to-page-link" href="https://demo.stiltsoft.com/pages/viewinfo.action?pageId=1015810" rel="nofollow" class="" title="Link to this Page (k)">
+                <span>Link to this Page…</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="view-in-hierarchy-link" href="https://demo.stiltsoft.com/pages/reorderpages.action?key=tblfilter&openId=1015810#selectedPageInHierarchy" rel="nofollow" class="" title="">
+                <span>View in Hierarchy</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-view-source-link" href="https://demo.stiltsoft.com/plugins/viewsource/viewpagesrc.action?pageId=1015810" rel="nofollow" class="action-view-source popup-link" title="">
+                <span>View Source</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-export-pdf-link" href="https://demo.stiltsoft.com/spaces/flyingpdf/pdfpageexport.action?pageId=1015810" rel="nofollow" class="" title="">
+                <span>Export to PDF</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-export-word-link" href="https://demo.stiltsoft.com/exportword?pageId=1015810" rel="nofollow" class="action-export-word" title="">
+                <span>Export to Word</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="import-word-doc" href="https://demo.stiltsoft.com/pages/worddav/uploadimport.action?pageId=1015810" rel="nofollow" class="" title="">
+                <span>Import Word Document</span>    </a>
+</li>
+                                </ul>
+                            <ul id="action-menu-modify" class="section-modify aui-dropdown2-section">
+                                            <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-copy-page-link" href="https://demo.stiltsoft.com/pages/copypage.action?idOfPageToCopy=1015810&spaceKey=tblfilter" rel="nofollow" class="action-copy" title="">
+                <span>Copy</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+                            
+    
+    
+    <a id="action-move-page-dialog-link" href="https://demo.stiltsoft.com/pages/viewpage.action?pageId=1015810" rel="nofollow" class="action-move" title="">
+                <span>Move</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                    
+                
+        <li class="first">
+                
+
+                    <span class=""><a href="https://demo.stiltsoft.com/collector/pages.action?key=tblfilter&src=breadcrumbs-collector">Pages</a></span>
+                </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#page-banner-end" class="assistive">Skip to end of banner</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner" style="visibility: visible;"><ul class="banner"><li id="system-content-items" class="noprint hidden"><a href="" title="Restrictions apply" id="content-metadata-page-restrictions" class="hidden"><img class="page-banner-item-icon" src="./h_files/red_padlock.png" style="height: 16px; width: 16px;"></a></li><li class="page-metadata-item noprint has-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><img class="page-banner-item-icon" src="./h_files/icon-jira-link.png" style="height: 16px; width: 16px;"><span>JIRA links</span></a></li></ul></div>
+            
+
+<a href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#page-banner-start" class="assistive">Go to start of banner</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="./h_files/h.html">Cloud Pricing Search</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+        
+
+    
+    
+        
+    
+    
+                    
+    
+
+                        
+    
+    
+
+    
+
+
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+        <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+
+<a id="icon-talk-insert" href="https://demo.stiltsoft.com/display/tblfilter/Table+Filter+Demo#link" class="gd-comment-icon gd-comment-icon-active gd-comment-icon-insert" data-content-id="1015810" style="top: 2750px; left: 403px;"></a></body>
+
+<div class="tablefilter-outer-wrapper">
+    
+    <div id="comboBoxDiv-TABLE_ID629376224_90549309" class="tableFilterCbStyle">
+	
+			     
+        <form class="aui">
+                 <p></br></br>&nbsp;&nbsp;Quantas horas por dia sua aplicação deverá funcionar?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></p>	
+                               <div class="filter-container">
+                                        <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tempo</label>
+                                       <input class="user-filter text" type="text" id="TABLE_ID524069653_51372460_0" style="width: 150px;" value=""/>
+                </div>
+                          
+                 <p></br></br></br></br>&nbsp;&nbsp;Em que ambiente sua aplicação irá funcionar?</p></p>	
+                            <div class="filter-container">
+			
+                                            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sistema Operacional:</label>
+                                        <select class="select" name="0" style="width: 150px;" multiple>
+                        ;
+                                                    <option value="0"
+                                                                   
+                                >Linux
+                            </option>
+                                                                                <option value="1"
+                                >Windows
+                            </option>
+                                        
+                                                                        </select>
+                </div>
+                          
+                        <p></br></br></p></p>	
+                         
+                              
+                              
+                               <div class="filter-container">
+                                         <br />   <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memoria (GB)</label>
+                                        <select class="select" name="1" style="width: 150px;" multiple>
+                        ;
+                                                    <option value="0"
+                                                                    selected="selected"
+                                >1
+                            </option>
+                                                                                <option value="1"
+                                >4
+                            </option>
+                                                                                <option value="2"
+                                >8
+                            </option>
+                                                                        </select>
+                </div>
+                                      
+                          
+                        <p></br></br></br></p></p>	
+                                                    
+                              
+                              
+                               <div class="filter-container">
+                                         <br />   <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nucleos (vCPUs):</label>
+                                        <select class="select" name="1" style="width: 150px;" multiple>
+                        ;
+                                                    <option value="0"
+                                                                    selected="selected"
+                                >1
+                            </option>
+                                                                                <option value="1"
+                                >2
+                            </option>
+                                                                                <option value="2"
+                                >3
+                            </option>
+                                                                        </select>
+                </div>
+                              
+                              
+                              
+                          
+                        <p></br></br></br></p></p>	
+                              
+                               <div class="filter-container">
+                                         <br />   <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Espaçamento em Disco:</label>
+                                        <select class="select" name="1" style="width: 150px;" multiple>
+                        ;
+                                                    <option value="0"
+                                    
+                                >20
+                            </option>
+                                                                                <option value="1"
+                                >30
+                            </option>
+                                                                                <option value="2"
+                                >50
+                            </option>
+                                                                        </select>
+                </div>
+                              
+                              
+                             
+                                                    <div class="filter-container filter-reset" title="Reset all filters">
+                </div>
+                    </form>
+            </div>  <p></br></br></p></p>	
+<div class="tableFilterCbStyle">
+	
+                      
+														<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planos Recomendados:
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+     </div>                         
+    <div id="TABLE_ID629376224_90549309" class="tablefilter-table-wrapper">
+        <div class="table-wrap"><table class="confluenceTable"><tbody><tr>
+			<th talk-marker="83" class="confluenceTh"><p talk-marker="84">Sistema Operacional</p></th>
+			<th talk-marker="85" class="confluenceTh"><p talk-marker="86">Memoria</p></th>
+			<th talk-marker="87" class="confluenceTh"><p talk-marker="88">Nucelos (vCPUs)</p></th>
+			<th talk-marker="89" class="confluenceTh"><p talk-marker="90">Espaçamento em Disco</p></th>
+			</tr>
+			
+			<tr>
+				<td talk-marker="91" class="confluenceTd"><p talk-marker="92">Linux</p></td>
+				<td talk-marker="93" class="confluenceTd"><p talk-marker="94">1</p></td>
+				<td talk-marker="95" class="confluenceTd"><p talk-marker="96">4</p></td>
+				<td talk-marker="97" class="confluenceTd"><p talk-marker="98">20</p></td>
+			</tr><tr>
+				<td talk-marker="99" class="confluenceTd"><p talk-marker="100">Linux</p></td>
+				<td talk-marker="101" class="confluenceTd"><p talk-marker="102">1</p></td>
+				<td talk-marker="103" class="confluenceTd"><p talk-marker="104">4</p></td>
+				<td talk-marker="105" class="confluenceTd"><p talk-marker="106">20</p></td>
+			</tr><tr>
+				<td talk-marker="107" class="confluenceTd"><p talk-marker="108">Linux</p></td>
+				<td talk-marker="109" class="confluenceTd"><p talk-marker="110">2</p></td>
+				<td talk-marker="111" class="confluenceTd"><p talk-marker="112">4</p></td>
+				<td talk-marker="113" class="confluenceTd"><p talk-marker="114">30</p></td>
+			</tr><tr>
+				<td talk-marker="115" class="confluenceTd"><p talk-marker="116">Windows</p></td>
+				<td talk-marker="117" class="confluenceTd"><p talk-marker="118">2</p></td>
+				<td talk-marker="119" class="confluenceTd"><p talk-marker="120">4</p></td>
+				<td talk-marker="121" class="confluenceTd"><p talk-marker="122">50</p></td>
+			</tr><tr>
+				<td talk-marker="123" class="confluenceTd"><p talk-marker="124">Windows</p></td>
+				<td talk-marker="125" class="confluenceTd"><p talk-marker="126">3</p></td>
+				<td talk-marker="127" class="confluenceTd"><p talk-marker="128">8</p></td>
+				<td talk-marker="129" class="confluenceTd"><p talk-marker="130">50</p></td>
+			</tr></tbody></table></div>
+    </div>
+
+    <script type="text/javascript">
+        (function ($) {
+
+            var timer_TABLE_ID629376224_90549309 = null;
+
+            $(document).ready(function () {
+                $("#comboBoxDiv-TABLE_ID629376224_90549309 select").chosen({
+                    no_results_text: 'No matches for',
+                    placeholder_text_multiple: 'Start typing...'
+                }).change(function(e, data) {
+                    if (data.selected) {
+                        $(this).find('option[value="' + data.selected + '"]').attr('selected', 'selected');
+                    } else if (data.deselected) {
+                        $(this).find('option[value="' + data.deselected + '"]').removeAttr('selected');
+                    }
+                    filterTable();
+                });
+
+                $("#comboBoxDiv-TABLE_ID629376224_90549309 input.user-filter").keyup(function () {
+                    if (timer_TABLE_ID629376224_90549309) {
+                        window.clearTimeout(timer_TABLE_ID629376224_90549309);
+                    }
+                    timer_TABLE_ID629376224_90549309 = window.setTimeout(function () {
+                        timer_TABLE_ID629376224_90549309 = null;
+                        filterTable();
+                    }, 330);
+                });
+
+                $('#comboBoxDiv-TABLE_ID629376224_90549309 .filter-reset').click(function() {
+                    $("#comboBoxDiv-TABLE_ID629376224_90549309 input.user-filter").val('');
+                    var select = $("#comboBoxDiv-TABLE_ID629376224_90549309 select");
+                    select.find("option:selected").removeAttr('selected');
+                    select.trigger('chosen:updated');
+                    filterTable();
+                });
+
+                                    filterTable();
+                
+                var isVisibleTABLE_ID629376224_90549309 = false;
+
+                            });
+
+            var filterTable = function() {
+                window.TableFilter.filterId = "TABLE_ID629376224_90549309";
+                window.TableFilter.filterTable();
+            }
+        })(AJS.$)
+    </script>
+
+</div>
+
+
+</html>

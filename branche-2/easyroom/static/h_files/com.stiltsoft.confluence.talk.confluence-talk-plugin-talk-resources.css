@@ -1,0 +1,752 @@
+/* module-key = 'com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources', location = 'css/talk.autocomplete.css' */
+.gd-suggestions {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #BBB;
+    background-color: #ffffff;
+    color: #000000;
+    position: absolute;
+    z-index: 5000;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gd-suggestions ol {
+    border-bottom: none;
+    list-style: none;
+    margin: 0;
+    padding: 4px 0;
+}
+
+.gd-suggestions ol li {
+    color: #535353;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 .3em;
+    position: relative;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+.gd-suggestions ol li.gd-suggestion-active {
+    color: #ffffff;
+    background-color: #6699cc;
+}
+
+.gd-suggestions ol li img {
+    height: 22px;
+    left: 6px;
+    position: absolute;
+    top: .35em;
+    width: 22px;
+    border: 0;
+}
+
+.gd-suggestions .gd-no-results {
+    font-style: italic;
+    cursor: default;
+}
+
+.gd-mention .gd-suggestion {
+    padding-left: 30px;
+}
+
+a.link-suggestion {
+    color: #535353;
+    text-decoration: none;
+}
+
+.link-suggestion .gd-suggestion {
+    padding-left: 20px;
+}
+
+.gd-suggestions .gd-suggestion-thumbnail {
+    width: 16px;
+    height: 16px;
+}
+/* module-key = 'com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources', location = 'css/talk.css' */
+#main #content.gd-content-offset,
+#main #personal-info-sidebar.gd-content-offset,
+#main #blog-sidebar.gd-content-offset,
+#zen-main.gd-content-offset {
+    margin-right: 280px;
+}
+
+.gd-zen-main-offset {
+    padding-right: 260px;
+}
+
+#talk-settings-dialog-item span {
+    background: url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk-settings.png") 0 2px no-repeat;
+    padding-left: 20px;
+}
+
+.talk-dialog-no-license {
+    color: #ff0000;
+    padding-top: 20px;
+}
+
+#zen-toolbar #talk-settings-dialog-item span {
+    display: block;
+    height: 16px;
+    background-position: 0 0;
+}
+
+#rw_menu_bar #talk-settings-dialog-item span {
+    background-position: 0 4px;
+}
+
+#talk-insert-pointer {
+    display: inline-block;
+}
+
+li > span[talk-marker]:not(.talk-image) {
+    display: block;
+}
+
+#icon-talk-insert.gd-comment-icon-insert {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk-add.png") 0 0 no-repeat;
+    position: absolute;
+    z-index: 7;
+    display: none;
+    width: 24px;
+}
+
+.gd-comment-icon {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk.png") 0 0 no-repeat;
+    display: inline-block !important;
+    height: 16px;
+    width: 16px;
+    cursor: default;
+    border-bottom: none !important;
+}
+
+.gd-comment-icon.talk-archived {
+                                /*todo icon*/
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk-archived.png") 0 0 no-repeat;
+}
+
+.wiki-content a.gd-comment-icon:hover {
+    border: none;
+}
+
+.gd-comment-icon.gd-comment-icon-active {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk-open.png") 0 0 no-repeat;
+}
+
+.gd-comment-icon.gd-comment-icon-active.talk-archived {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/talk-archived-open.png") 0 0 no-repeat;
+}
+
+#gd-comments-messages .aui-message {
+    z-index: 6;
+    position: fixed;
+    margin-right: 25px;
+}
+
+.gd-error-container .aui-message {
+    margin: 10px;
+}
+
+.gd-comments-sidebar {
+    position: absolute;
+    white-space: normal;
+    text-align: left;
+    overflow: visible;
+}
+
+.edit #talk-show-hide-container {
+    display: none;
+}
+
+#talk-show-hide-container {
+    position: fixed;
+    top: 50%;
+    cursor: pointer;
+}
+
+#talk-show-hide-container div {
+    width: 16px;
+    height: 16px;
+}
+
+#talk-hider {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/hide.png") 0 0 no-repeat;
+}
+
+#talk-shower {
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/show.png") 0 0 no-repeat;
+}
+
+.gd-comments {
+    color: black;
+    font-family: Arial,sans-serif,sans,serif;
+    font-size: 13px;
+}
+
+.gd-pane-view:focus,
+.gd-pane-view:active {
+    outline: 0 none;
+}
+
+.gd-comments-layout .gd-pane-view {
+    -moz-user-select: text;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    direction: ltr;
+    border: 1px solid #D9D9D9;
+    border-radius: 1px;
+    position: absolute;
+    z-index: 4;
+    width: 240px;
+}
+
+.gd-comments-layout .gd-pane-view:hover {
+    border-color: #C6C6C6 !important;
+    background-image: -moz-linear-gradient(top , #F8F8F8, #F1F1F1);
+    background-image: -webkit-linear-gradient(top , #F8F8F8, #F1F1F1);
+    background-image: -ms-linear-gradient(top , #F8F8F8, #F1F1F1);
+}
+
+.gd-comments-layout .gd-pane-view.gd-pane-trimmed {
+    border-top: none;
+}
+
+.gd-pane-view .gd-after {
+    display: none;
+}
+
+.gd-pane-view.gd-pane-trimmed .gd-after {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    position: absolute;
+    z-index: 5;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+.talk-restrictions {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.talk-restriction-icon {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.talk-restricted {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/lock.png") 0 0 no-repeat;
+}
+
+.gd-comment-active:not(.talk-archived) .talk-not-restricted {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    background: transparent url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/unlock.png") 0 0 no-repeat;
+    margin-right: 2px;
+}
+
+.gd-comment-active.editable .talk-restrictions {
+    top: 27px;
+}
+
+.talk-permissions-dialog .aui-dropdown {
+    width: 99% !important;
+}
+
+.talk-permissions-dialog .aui-dropdown .last a span {
+    background-position: 6px;
+}
+
+.talk-permissions-dialog-buttons {
+    padding-top: 10px;
+}
+
+.talk-cancel-permissions {
+    margin-left: 10px;
+}
+
+.talk-action-status {
+    height: 16px;
+    width: 16px;
+    float: right;
+    display: none;
+    margin-top: 7px;
+}
+
+.not-editable .remove-restriction {
+    display: none;
+}
+
+.gd-reply.gd-reply-first {
+    border-top: medium none !important;
+}
+
+.gd-reply {
+    border-top: 1px solid #F0F0F0;
+    padding: 7px;
+    position: relative;
+}
+
+.gd-reply.new-reply {
+    background-color: #ebf2f9;
+}
+
+.gd-comment-active .gd-reply.new-reply {
+    background-color: #ffe9a8;
+}
+
+.gd-user-icon {
+    position: absolute;
+    left: 7px !important;
+}
+
+.gd-reply-author {
+    font-weight: bold;
+    margin-left: 32px;
+}
+
+.gd-reply-timestamp {
+    color: #666666;
+    font-size: 10px;
+    margin: 3px 0 0 32px;
+}
+
+.gd-reply-collapsible {
+    position: relative;
+}
+
+.gd-reply-html {
+    color: #333333;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    word-wrap: break-word;
+    margin-bottom: -10px;
+}
+
+.gd-reply-preview {
+    margin-bottom: 0;
+}
+
+#talk-insert .gd-reply-preview {
+    padding-top: 20px;
+    margin-bottom: -15px;
+}
+
+.gd-reply-html p,
+.gd-reply-html table,
+.gd-reply-html h1,
+.gd-reply-html h2,
+.gd-reply-html h3,
+.gd-reply-html h4,
+.gd-reply-html h5,
+.gd-reply-html h6,
+.gd-reply-html blockquote,
+.gd-reply-html .sectionColumnWrapper,
+.gd-reply-html .aui-message {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.gd-reply-html ul, .gd-reply-html ol {
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+.gd-reply-html > ul, .gd-reply-html > ol {
+    margin-bottom: 10px;
+}
+
+.gd-pane-view .gd-reply-resolve-undo,
+.gd-reply-edit,
+.gd-reply-resolve-undo,
+.gd-comment-active .gd-comment,
+.gd-comment-active .gd-resolve {
+    color: #1155CC;
+}
+
+.gd-inline-block {
+    display: inline-block;
+    position: relative;
+}
+
+.gd-reply .gd-reply-control {
+    display: none;
+}
+
+.gd-reply-delete,
+.gd-reply-edit {
+    color: #3366CC;
+    font-size: 11px;
+    margin: 0 2px;
+}
+
+.gd-reply-delete:hover,
+.gd-reply-edit:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gd-input {
+    position: relative;
+    z-index: 6;
+}
+
+.gd-input-spinner {
+    background: url("/s/en_GB/5509/df269dcb09b33d7c337c07d822c97aeb564430a7.4/2.2.0/_/download/resources/com.stiltsoft.confluence.talk.confluence-talk-plugin:talk-resources/images/loading.gif") no-repeat;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+}
+
+.gd-input-textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    border: 1px solid #C8C8C8;
+    color: #999999;
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+    margin: 0;
+    outline-width: 0 !important;
+    overflow: hidden;
+    padding: 4px;
+    resize: none;
+    width: 100%;
+}
+
+.gd-input-textarea-markup {
+    display: none;
+}
+
+.gd-input-buttons {
+    display: none;
+    /*todo временно отключаем*/
+    /*text-align: right;*/
+}
+
+.gd-button {
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 16px;
+    min-width: 54px;
+    outline: 0 none;
+    padding: 0 8px;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.gd-button-action {
+    background-color: #4D90FE;
+    background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
+    border: 1px solid #3079ED;
+    color: #FFFFFF;
+}
+
+.gd-button-standard {
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #F5F5F5, #F1F1F1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444444;
+}
+
+.gd-input-cancel {
+    margin: 2px 0;
+    /*todo временно отключаем*/
+    /*float: right;*/
+    min-width: 0;
+    /*todo временно отключаем*/
+    /*padding-left: 0;*/
+    border-bottom: none !important;
+}
+
+.gd-input-post {
+    margin: 2px 7px 2px 0;
+}
+
+.gd-input-preview, .gd-input-edit {
+    margin: 2px 7px 2px 0;
+    padding: 0 6px;
+    float: left;
+    /*todo временно отключаем*/
+    display: none;
+}
+
+.gd-input-buttons-post {
+    font-weight: bold;
+}
+
+.gd-pane-view .gd-reply-resolve {
+    border-top: 1px solid #FEEF9C;
+    bottom: 0;
+    left: 0;
+    padding-top: 6px;
+    position: relative;
+    width: 100%;
+}
+
+.gd-pane-view .gd-reply-resolve-header {
+    font-weight: bold;
+    margin: 0 6px;
+    padding: 2px 0;
+}
+
+.gd-pane-view .gd-reply-resolve-undo {
+    color: #3366CC;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.gd-manage-button {
+    display: none;
+    font-size: 10px;
+    padding-left: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.gd-manage-button > .gd-button {
+    height: 17px;
+    line-height: 17px;
+    margin: 2px 2px 0 0;
+}
+
+#talk-insert .gd-input-pane {
+    border-top: none;
+}
+
+.gd-input-pane {
+    border-top: 1px solid #F0F0F0;
+    display: none;
+    padding: 7px;
+}
+
+.gd-input-pane .gd-input-spinner {
+    right: 12px;
+    top: 12px;
+}
+
+.gd-input-pane .gd-input-textarea {
+    height: 26px;
+}
+
+.gd-button-action.gd-button-disabled {
+    background: none repeat scroll 0 0 #4D90FE;
+    opacity: 0.5;
+    cursor: default;
+ }
+
+.gd-button-standard.gd-button-disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.gd-comments-layout .gd-arrow-outer {
+    border-top: none;
+    border-bottom: 14px solid transparent;
+    border-left: none;
+    border-right: 14px solid #FFE764;
+    left: -15px;
+    top: -1px;
+}
+
+.gd-comments-layout .gd-arrow-outer {
+    border-right: 14px solid #FFE572;
+    display: none;
+}
+
+.gd-comments-layout .gd-arrow-inner,
+.gd-comments-layout .gd-arrow-outer {
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+.gd-comments-layout .gd-arrow-inner {
+    border-top: none;
+    border-bottom: 14px solid transparent;
+    border-left: none;
+    border-right: 14px solid #FFFCE9;
+    left: -13px;
+    top: 0;
+}
+
+.gd-comments-layout .gd-arrow-inner {
+    border-right: 14px solid #FCFAC6;
+    display: none;
+}
+
+/* Active Talk Comments */
+.gd-comment-active.gd-pane-view,
+.gd-comment-active.gd-pane-view:hover {
+    background: none repeat scroll 0 0 #FCFAC6 !important;
+}
+
+.gd-comments-layout .gd-pane-view.gd-comment-active {
+    cursor: default;
+}
+
+.gd-comments-layout .gd-comment-active.gd-pane-view {
+    border: 1px solid #FFE764;
+    border-top-left-radius: 0;
+    box-shadow: 2px 2px 8px #CCCCCC;
+    z-index: 5;
+}
+
+.gd-comments-layout .gd-comment-active.gd-pane-view,
+.gd-comments-layout .gd-comment-active.gd-pane-view:hover {
+    border-color: #FFE572 !important;
+    border-radius: 0 0 0 0;
+}
+
+.gd-comments-layout .gd-comment-active.gd-pane-view > .gd-arrow-inner,
+.gd-comments-layout .gd-comment-active.gd-pane-view > .gd-arrow-outer {
+    display: block;
+}
+
+.gd-comment-active.gd-pane-view .gd-reply-control {
+    display: block;
+}
+
+.gd-comment-active.gd-pane-view.talk-archived .gd-reply-control,
+.gd-comment-active.gd-pane-view.talk-archived .gd-input-pane,
+.gd-comment-active.gd-pane-view.talk-archived .gd-resolve-button {
+    display: none;
+}
+
+.gd-comment-active.gd-pane-view > div > .gd-reply {
+    border-top: 1px solid #FEEF9C;
+}
+
+.gd-comment-active.gd-pane-view > .gd-resolve-button {
+    display: block;
+    opacity: 1;
+}
+
+.gd-comment-active.gd-pane-view .gd-restore-button {
+    display: none;
+}
+
+.gd-comment-active.gd-pane-view.talk-archived .gd-restore-button {
+    display: block;
+}
+
+.gd-button-standard:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+.gd-button-action.gd-button-hover {
+    background-color: #357AE8;
+    background-image: -moz-linear-gradient(center top , #4D90FE, #357AE8);
+    border: 1px solid #2F5BB7;
+}
+
+.gd-button-standard.gd-button-hover {
+    background-color: #F8F8F8;
+    background-image: -moz-linear-gradient(center top , #F8F8F8, #F1F1F1);
+    border: 1px solid #C6C6C6;
+    color: #333333;
+}
+
+.gd-comment-active.gd-pane-view > .gd-input-pane {
+    border-top: 1px solid #FEEF9C;
+    display: block;
+}
+
+.gd-input-typing > .gd-input-textarea {
+    color: #000000;
+}
+
+.gd-input-textarea:disabled {
+    background-color: #EEEEEE !important;
+}
+
+.gd-input-typing > .gd-input-buttons {
+    display: block;
+}
+
+#gd-shadow {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    color: #FFFFFF;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 7;
+}
+
+#gd-shadow tbody tr td {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#gd-shadow.bottom tbody tr td {
+    vertical-align: bottom;
+}
+
+#gd-shadow.top tbody tr td {
+    vertical-align: top;
+}
+
+#gd-shadow table {
+    margin-left: 30px;
+    width: 200px;
+}
+
+#gd-shadow table table.shadow-buttons-table {
+    margin-left: 0;
+    width: 100%;
+}
+
+.shadow-buttons-table .gd-button-standard {
+    margin: 0;
+}
+
+#gd-shadow-description {
+    font-weight: bold;
+}
+
+.gd-no-license, .gd-eval-expiring {
+    color: #ff0000;
+    font-size: 11px;
+}
+
+.gd-eval-expiring {
+    padding-bottom: 5px;
+}
+
+#zen-header-back #header,
+#zen-footer-back #zen-footer {
+    z-index: 4;
+}
+
+#main #content.gd-content-offset .pageSection {
+    margin-right: 0;
+}
+
+.theme-documentation #header {
+    position: relative !important;
+    z-index: 10;
+}
+
+#inline-dialog-talk-feature-discovery .contents ul {
+    padding-left: 40px;
+}
