@@ -70,7 +70,7 @@
 	    //localStorage.setItem("imageUrl", profile.getImageUrl());
        
             //window.alert('Bem Vindo ' + profile.getName() +"!");
-	if (profile.getImageUrl() ==  undefined){
+/*	if (profile.getImageUrl() ==  undefined){
 	    document.getElementById('imgavatar').setAttribute('src', "images/avatar2.jpg");} else {document.getElementById('imgavatar').setAttribute('src', profile.getImageUrl());}
 	    document.getElementById("h1profile").innerHTML = "<strong>Bem Vindo</strong> "+profile.getName()+",<br> navegue abaixo para conhecer o aplicativo.<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>";
 
@@ -83,8 +83,9 @@
 
 	document.getElementById("buttonsair").style.display = "block"; 
 
+*/
 
-
+        window.location.href = "/home";
   var xmlHttp = null;
 
         xmlHttp = new XMLHttpRequest();
@@ -131,6 +132,7 @@ document.getElementById("buttonsair").style.display = "none";
 document.getElementById("buttonamigos").style.display = "none";
 document.getElementById("buttonmeuapt").style.display = "none"; 
 
+        window.location.href = "#";
   }
 </script>
 						</ul>

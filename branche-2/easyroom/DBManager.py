@@ -124,7 +124,7 @@ def get_house_user(id):
         format_str = decodeLatin(str(rows)).replace("(", "").replace("),", "").replace(",)", "").replace(")", "").replace("'", "")
 	
 	format_str = format_str.replace("images*", "<img src='images/").replace(".png", ".png' />").replace("{", "('").replace("}", "')")
-	return "<table>"+format_str+"</table>"
+	return "<table class=\"table table-striped\">"+format_str+"</table>"
 
 ## Insert house on DB ##
 def add_house(id=id_generator(20), name="NULL", iduser="NULL", address="NULL", lat="NULL", lng="NULL", imgurl="NULL"):
@@ -178,5 +178,5 @@ def main():
 #print del_moradias("106816106609413634823")
 #print get_all_houses()
 #create_moradia_table()
-print get_all_vacancys()
+#print get_all_vacancys()
 #print get_house_user("106816106609413634823")

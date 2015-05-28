@@ -1,0 +1,1153 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Easy Room</title>
+
+		<base href="../" target="_blank">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img id="imgavatar" src="images/avatar.jpg" alt="" /></a>
+				<h1 id="h1profile"><strong>Faça seu login</strong>, e começe<br />
+				a usar o aplicativo agora mesmo!<br />
+				Mais informações: <a href="https://sites.google.com/site/grupo6easyroom/">EASYROOM-UFCG</a>.</h1>
+			</header>
+
+		<!-- Main -->
+			<div id="main" style="height: 100%;">
+
+				<!-- One -->
+					<section id="one" style="height: 100%;">
+					<div>	<header class="major">
+							<h2>Easy Room</h2>
+						</header>
+						
+
+
+
+  <head>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <meta charset="utf-8">
+
+	
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js">
+
+</script>
+
+<!--		<link rel="stylesheet" type="text/css" href="css/moradia.css" /> -->
+
+    <style>
+
+      html, body, #map-canvas {
+
+        height: 100%;
+
+        width: 100%;
+
+        margin: 0px;
+
+        padding: 0px
+
+      }
+
+	     #panel {
+
+        
+
+        
+
+      }
+
+      .controls {
+
+        margin-top: 16px;
+
+        border: 1px solid transparent;
+
+        border-radius: 2px 0 0 2px;
+
+        box-sizing: border-box;
+
+        -moz-box-sizing: border-box;
+
+        height: 32px;
+
+        outline: none;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+      }
+
+
+
+      #pac-input {
+
+        background-color: #fff;
+
+        font-family: Roboto;
+
+        font-size: 15px;
+
+        font-weight: 300;
+
+        margin-left: 12px;
+
+        padding: 0 11px 0 13px;
+
+        text-overflow: ellipsis;
+
+        width: 400px;
+
+      }
+
+
+
+      #pac-input:focus {
+
+        border-color: #4d90fe;
+
+      }
+
+
+
+      .pac-container {
+
+        font-family: Roboto;
+
+      }
+
+
+
+      #type-selector {
+
+        color: #fff;
+
+        background-color: #4d90fe;
+
+        padding: 5px 11px 0px 11px;
+
+      }
+
+
+
+      #type-selector label {
+
+        font-family: Roboto;
+
+        font-size: 13px;
+
+        font-weight: 300;
+
+      }
+
+
+
+    </style>
+
+	    <style>
+
+      #target {
+
+        width: 345px;
+
+      }
+
+#wrapper {
+
+  margin-left: 200px;
+
+}
+
+#content {
+
+  float: right;
+
+  width: 60%;
+
+}
+
+#sidebar {
+
+  float: left;
+
+  width: 200px;
+
+  margin-left: -200px;
+
+}
+
+#cleared {
+
+  clear: both;
+
+}
+
+</style>
+
+	
+
+    <title>Places search box</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+
+    <script>
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+
+// feature. People can enter geographical searches. The search box will return a
+
+// pick list containing a mix of places and predicted search terms.
+
+
+
+
+
+
+
+function initialize() {
+
+
+  var markers = [];
+  var name_moradia;
+  var add_moradia;
+  var lat_moradia;
+  var lnt_moradia;
+  var img_moradia;
+ var id_user;
+
+
+/*  var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+
+        xmlHttp.open("GET","/getmoradia/1234", false);//+profile.getId()+"/"+profile.getName()+"/"+profile.getEmail(),false);
+
+    xmlHttp.send( null );
+
+// window.alert(xmlHttp.responseText+"--");
+var latlng=xmlHttp.responseText.split(",");*/
+//  var haightAshbury = new google.maps.LatLng(parseFloat(latlng[0]), parseFloat(latlng[1]));//(-7.2163815,-35.9074335);
+var haightAshbury = new google.maps.LatLng(-7.2163815,-35.9074335);
+  var mapOptions = { 
+
+    zoom: 16,
+
+    center: haightAshbury,
+
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+
+      mapOptions);
+
+//addMarker(map.getCenter());
+
+  // Create the search box and link it to the UI element.
+
+  var input = /** @type {HTMLInputElement} */(
+
+      document.getElementById('pac-input'));
+
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  google.maps.event.addListener(map, 'click', function(event) {
+
+    addMarker(event.latLng);
+
+  });
+
+  
+
+  function addMarker(location) {
+
+  if (markers.length >= 1){
+
+  return;}
+
+  var nome_user = "Antonio";
+
+  var icon_name = $('input[name="tipo-moradia"]:checked').val();
+
+  var nome_moradia = document.getElementById("box-nome-moradia").value;
+
+  var marker = new google.maps.Marker({
+
+    position: location,
+
+  icon:'images/'+icon_name+'-icon.png',
+
+    map: map
+
+  });
+
+img_moradia=  "images*"+icon_name+"-icon.png";
+    var geocoder = new google.maps.Geocoder();
+
+  
+
+   function getAddress(location) {  
+
+  var latlng = new google.maps.LatLng(location.lat(), location.lng());
+lat_moradia = location.lat(); lnt_moradia = location.lng();
+
+    geocoder.geocode({'latLng': latlng}, function(results, status) {
+
+      if (status == google.maps.GeocoderStatus.OK) {
+
+        if (results[0]) {
+
+        
+
+         
+
+		  document.getElementById("boxmessage").innerHTML = "<div id=\"boxmessage\"><strong>"+tipo_moradia+": "+nome_moradia+"</strong><br>"
+
+	  +(results[0].formatted_address.replace(" - ", "<br>"))+"</div>";
+
+name_moradia = tipo_moradia+": "+nome_moradia+"<br>";
+		   add_moradia= (results[0].formatted_address.replace(" - ", "<br>"));
+		  
+
+        }
+
+      } else {
+
+         return "Desconhecido."//window.alert("Geocoder failed due to: " + status);
+
+      }
+
+    });
+
+  
+
+   }
+
+  var name_us = "name";
+
+  var add_us = "add";
+
+ getAddress(location);
+
+  
+
+	var tipo_moradia = icon_name.charAt(0).toUpperCase() + icon_name.slice(1);
+
+  var infowindow = new google.maps.InfoWindow({
+
+    content: "<div id=\"boxmessage\"></div>"//<strong>"+tipo_moradia+" "+nome_moradia+"</strong><br></div>"
+
+	  //+'-Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()+""
+
+  });
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+google.maps.event.addListener(marker, 'click', function() {
+
+  infowindow.open(map,marker);
+
+  });
+
+  infowindow.open(map,marker);
+
+  markers.push(marker);
+
+}
+
+  
+
+  
+
+// Sets the map on all markers in the array.
+
+function setAllMap(map) {
+
+  for (var i = 0; i < markers.length; i++) {
+
+    markers[i].setMap(map);
+
+  }
+
+}
+
+
+
+// Removes the markers from the map, but keeps them in the array.
+
+function clearMarkers() {
+
+  setAllMap(null);
+
+}
+
+
+
+// Shows any markers currently in the array.
+
+function showMarkers() {
+
+  setAllMap(map);
+
+}
+
+
+
+// Deletes all markers in the array by removing references to them.
+
+deleteMarkers = function deleteMarkers() {
+
+  clearMarkers();
+
+  markers = [];
+
+}
+
+salvarMoradia = function salvarMoradia() {
+
+
+  var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+if (add_moradia == undefined){window.alert("Clique em algum ponto do mapa para adicionar uma moradia!")}
+else{
+var req= "/addhouse/"+iduser+"/"+name_moradia+"/"+add_moradia+"/"+lat_moradia+"/"+lnt_moradia+"/"+img_moradia;
+window.alert(req);
+xmlHttp.open("GET",req, false);
+xmlHttp.send( null );
+window.alert(xmlHttp.responseText);
+}
+
+
+
+}
+  
+
+
+
+  
+
+  var searchBox = new google.maps.places.SearchBox(
+
+    /** @type {HTMLInputElement} */(input));
+
+
+
+  // [START region_getplaces]
+
+  // Listen for the event fired when the user selects an item from the
+
+  // pick list. Retrieve the matching places for that item.
+
+  google.maps.event.addListener(searchBox, 'places_changed', function() {
+
+    var places = searchBox.getPlaces();
+
+
+
+    if (places.length == 0) {
+
+      return;
+
+    }
+
+    for (var i = 0, marker; marker = markers[i]; i++) {
+
+      marker.setMap(null);
+
+    }
+
+
+
+    // For each place, get the icon, place name, and location.
+
+    markers = [];
+
+    var bounds = new google.maps.LatLngBounds();
+
+    for (var i = 0, place; place = places[i]; i++) {
+
+      var image = {
+
+        url: place.icon,
+
+        size: new google.maps.Size(71, 71),
+
+        origin: new google.maps.Point(0, 0),
+
+        anchor: new google.maps.Point(17, 34),
+
+        scaledSize: new google.maps.Size(1, 1)
+
+      };
+
+
+
+      // Create a marker for each place.
+
+      var marker = new google.maps.Marker({
+
+        map: map,
+
+        icon: image,
+
+        title: place.name,
+
+        position: place.geometry.location
+
+      });
+
+
+
+      markers.push(marker);
+
+
+
+      bounds.extend(place.geometry.location);
+
+    }
+
+deleteMarkers();
+
+    map.fitBounds(bounds);
+
+	
+
+          map.setZoom(16);
+
+  });
+
+  // [END region_getplaces]
+
+
+
+  // Bias the SearchBox results towards places that are within the bounds of the
+
+  // current map's viewport.
+
+  google.maps.event.addListener(map, 'bounds_changed', function() {
+
+    var bounds = map.getBounds();
+
+    searchBox.setBounds(bounds);
+
+  });
+
+}
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+    </script>
+
+
+
+  </head>
+
+  <body>
+
+  
+
+	<fieldset style="width: 88%;">
+
+	
+
+		<legend>Preencha as informações abaixo referente a sua moradia:</legend>
+
+   <div id="panel" style="display: none;">
+
+    <div>Insira um nome: </div><input id="box-nome-moradia" type="text" placeholder="Nome">
+
+	
+
+<p><p>
+
+    <div>Escolha o tipo de moradia: </div>
+
+	<form action="">
+
+
+
+</form>
+
+
+
+
+
+<div id="wrapper">
+
+  <div id="content">
+
+ <input type="radio" name="tipo-moradia" value="apt">Apartamento<img src='images/apt-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="pensionato">Pensionato<img src='images/pensionato-icon.png' />
+
+  </div>
+
+  <div id="sidebar">
+
+  
+
+  <input type="radio" name="tipo-moradia" value="casa" checked="checked">Casa<img src='images/casa-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="republica">República<img src='images/republica-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="kitnet">Kitnet<img src='images/kitnet-icon.png' /><br>
+
+  </div>
+
+  <div id="cleared"></div>
+
+</div>
+
+
+
+
+
+ </fieldset>	
+
+
+
+<p><p>
+ 
+</div>
+<!--  <div id="map-canvas"></div> 
+    <input id="pac-input" class="controls" type="text" placeholder="Busque um endereço">  -->
+
+	<div id="panel2" style="display: none;" >
+
+
+<a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a>
+
+      <input onclick="salvarMoradia();" class="button" type=button value="Salvar Moradia">
+
+      <input onclick="deleteMarkers();" class="button" type=button value="Deletar Moradia"></div> 
+<p>
+
+
+    
+<input id="pac-input" tyle="display: none;" lass="controls" type="text" placeholder="Busque um endereço">
+    <div id="map-canvas" style="height: 600px;"></div> </div>
+
+  </body>
+
+ 
+<ul class="actions" >
+
+
+
+
+    <meta name="google-signin-client_id" content="210181327923-6uu8e7d3rdsutkbrbcac9hmkkva897dl.apps.googleusercontent.com" />
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+
+        var saySomething = function() {
+            window.alert("Welcome to EasyRoom!");
+        };
+        //gapi.auth2.init().fecth_basic_profile = true;
+        var onSignIn = function (googleUser) {
+            var profile = googleUser.getBasicProfile();
+	iduser = profile.getId();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
+      
+	
+   // window.alert(xmlHttp.responseText);
+
+
+
+    //localStorage.setItem("name", profile.getName());
+	    //localStorage.setItem("imageUrl", profile.getImageUrl());
+       
+            //window.alert('Bem Vindo ' + profile.getName() +"!");
+	if (profile.getImageUrl() ==  undefined){
+	    document.getElementById('imgavatar').setAttribute('src', "images/avatar2.jpg");} else {document.getElementById('imgavatar').setAttribute('src', profile.getImageUrl());}
+	    document.getElementById("h1profile").innerHTML = "<strong>Bem Vindo</strong> "+profile.getName()+",<br> navegue abaixo para conhecer o aplicativo.<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>";
+
+	document.getElementById("panel").style.display = "block"
+
+        document.getElementById("panel2").style.display = "block";
+
+        document.getElementById("pac-input").style.display = "block";
+
+
+
+
+  var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+ 
+        xmlHttp.open("GET","/updateuser/"+profile.getId()+"/"+profile.getName()+"/"+profile.getEmail(),false);
+
+    xmlHttp.send( null );
+            
+        };
+    </script>
+</head>
+<!--<body style="background-color: lightgrey">
+    <div style="background-color: lightsteelblue">
+        <h1 style="color: dodgerblue; text-align: center">Welcome to EasyRoom!</h1> 
+    </div> -->
+    <div align="center" style="display: none;" class="g-signin2" data-onsuccess="onSignIn"></div>
+     <div align="center">
+       <!-- <input type="button" onclick="myInfo()" value="My Info"
+               style="align-self: center; width: 80px; height: 40px"/> -->
+    </div> 
+</body>
+<br><br>
+ 
+<!--
+			<li><a href="#" id="buttonvagas" style="display: none" class="button">Buscar Vagas</a></li>
+
+<li><a href="#" id="buttonmeuapt" style="display: none" class="button">Meu predio</a></li>
+<li><a href="#" id="buttonamigos" style="display: none" class="button">Buscar Amigos</a></li>
+-->
+
+			<li><a href="#" id="buttonsair" style="display: none" class="button" onclick="signOut();">Sign out</a></li>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+ document.getElementById("h1profile").innerHTML = "<strong>Faça seu login</strong>, e começe<br> a usar o aplicativo agora mesmo!<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>.";
+	    document.getElementById('imgavatar').setAttribute('src', "images/avatar.jpg");
+document.getElementById("buttonvagas").style.display = "none";
+document.getElementById("buttonsair").style.display = "none";
+document.getElementById("buttonamigos").style.display = "none";
+document.getElementById("buttonmeuapt").style.display = "none"; 
+
+  }
+</script>
+
+
+</div>						</ul>
+
+
+					</section>
+
+				<!-- Two 
+					<section id="two">
+						<h2>Recent Work</h2>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>Magna sed consequat tempus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<h3>Ultricies lacinia interdum</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>Tortor metus commodo</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>Quam neque phasellus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<h3>Nunc enim commodo aliquet</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>Risus ornare lacinia</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul>
+					</section>
+-->
+
+				<!-- Three -->
+							
+						
+				
+
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="6u 12u$(xsmall)">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button special">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button special small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button special">Special</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button big">Big</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button special fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button special fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button special icon fa-download">Icon</a></li>
+								<li><a href="#" class="button icon fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button special disabled">Special</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="demo-category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u(small)">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="6u 12u$(small)">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+			</div>
+
+		<!-- Footer 
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li><li>Design: <a href="#">HTML5 UP</a></li>
+				</ul>
+			</footer>-->
+
+	</body>
+</html>

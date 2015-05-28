@@ -1,45 +1,278 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
-	<head>
-		<title>Easy Room</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>EasyRoom | Dashboard</title>
 
 		<base href="../" target="_blank">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body id="top">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.2 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
 
-		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img id="imgavatar" src="images/avatar.jpg" alt="" /></a>
-				<h1 id="h1profile"><strong>Faça seu login</strong>, e começe<br />
-				a usar o aplicativo agora mesmo!<br />
-				Mais informações: <a href="https://sites.google.com/site/grupo6easyroom/">EASYROOM-UFCG</a>.</h1>
-			</header>
+			<link rel="stylesheet" href="css/style2.css" />
+		
+	
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect.
+    -->
+    <link href="dist/css/skins/skin-blue.min.css" rel="stylesheet" type="text/css" />
 
-		<!-- Main -->
-			<div id="main" style="height: 100%;">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!--
+  BODY TAG OPTIONS:
+  =================
+  Apply one or more of the following classes to get the 
+  desired effect
+  |---------------------------------------------------------|
+  | SKINS         | skin-blue                               |
+  |               | skin-black                              |
+  |               | skin-purple                             |
+  |               | skin-yellow                             |
+  |               | skin-red                                |
+  |               | skin-green                              |
+  |---------------------------------------------------------|
+  |LAYOUT OPTIONS | fixed                                   |
+  |               | layout-boxed                            |
+  |               | layout-top-nav                          |
+  |               | sidebar-collapse                        |  
+  |---------------------------------------------------------|
+  
+  -->
+  <body class="skin-blue">
+    <div class="wrapper">
 
-				<!-- One -->
-					<section id="one" style="height: 100%;">
-					<div>	<header class="major">
+      <!-- Main Header -->
+      <header class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo"><b>EasyRoom</b></a>
+
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+              <li class="dropdown messages-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-envelope-o"></i>
+                  <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 4 messages</li>
+                  <li>
+                    <!-- inner menu: contains the messages -->
+                    <ul class="menu">
+                      <li><!-- start message -->
+                        <a href="#">
+                          <div class="pull-left">
+                            <!-- User Image -->
+                            <img src="images/avatar.png" class="img-circle" alt="User Image"/>
+                          </div>
+                          <!-- Message title and timestamp -->
+                          <h4>                            
+                            Support Team
+                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                          </h4>
+                          <!-- The message -->
+                          <p>Why not buy a new awesome theme?</p>
+                        </a>
+                      </li><!-- end message -->                      
+                    </ul><!-- /.menu -->
+                  </li>
+                  <li class="footer"><a href="#">See All Messages</a></li>
+                </ul>
+              </li><!-- /.messages-menu -->
+
+              <!-- Notifications Menu -->
+              <li class="dropdown notifications-menu">
+                <!-- Menu toggle button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">10</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 10 notifications</li>
+                  <li>
+                    <!-- Inner Menu: contains the notifications -->
+                    <ul class="menu">
+                      <li><!-- start notification -->
+                        <a href="#">
+                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                        </a>
+                      </li><!-- end notification -->                      
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+              <!-- Tasks Menu -->
+              <li class="dropdown tasks-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-flag-o"></i>
+                  <span class="label label-danger">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 9 tasks</li>
+                  <li>
+                    <!-- Inner menu: contains the tasks -->
+                    <ul class="menu">
+                      <li><!-- Task item -->
+                        <a href="#">
+                          <!-- Task title and progress text -->
+                          <h3>
+                            Design some buttons
+                            <small class="pull-right">20%</small>
+                          </h3>
+                          <!-- The progress bar -->
+                          <div class="progress xs">
+                            <!-- Change the css width attribute to simulate progress -->
+                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                              <span class="sr-only">20% Complete</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li><!-- end task item -->                      
+                    </ul>
+                  </li>
+                  <li class="footer">
+                    <a href="#">View all tasks</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- User Account Menu -->
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <!-- The user image in the navbar-->
+                  <img id="imgavatar1" src="images/avatar.png" class="user-image" alt="User Image"/>
+                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                  <span id="username1" class="hidden-xs"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- The user image in the menu -->
+                  <li class="user-header">
+                    <img id="imgavatar2" src="images/avatar.png" class="img-circle" alt="User Image" />
+                    <p id="username2">
+                      
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Amigos</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Moradias</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Solicitações</a>
+                    </div>
+                  </li>
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="javascript:signOut();" class="btn btn-default btn-flat">Sair</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img id="imgavatar3" src="images/avatar.png" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+              <p id="username3"></p>
+              <!-- Status -->
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>
+
+          <!-- search form (Optional) -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search..."/>
+              <span class="input-group-btn">
+                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          <!-- /.search form -->
+
+          <!-- Sidebar Menu -->
+          <ul class="sidebar-menu">
+           <!-- <li class="header">HEADER</li> -->
+            <!-- Optionally, you can add icons to the links -->
+            <li  ><a href="/home" target="_self" >
+	<i class="fa fa-laptop"></i><span>Início</span></a></li>
+            <li><a href="/home" target="_self" >
+	<i class="fa fa-book"></i><span>Buscar Vaga</span></a></li>
+            <li class="active"><a href="/addmoradia" target="_self" >
+	<i class="fa fa-edit"></i><span>Adicionar Moradia</span></a></li> 
+            <li><a  href="/moradias" target="_self" >
+	 <i class="fa fa-th"></i><span>Minhas Moradias</span></a></li>
+            <li><a href="/home" target="_self" >
+	<i class="fa fa-book"></i><span>Buscar Moradias</span></a></li>
+        <!--    <li class="treeview">
+              <a href="#"><span>Moradias</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li ><a href="#">Adicionar Moradia</a></li>
+                <li><a href="#">Minhas Moradias</a></li>
+                <li><a href="#">Buscar Moradias</a></li>
+              </ul>
+            </li> -->
+            <li><a href="javascript:signOut();">
+	<i class="fa fa-share"></i><span>Sair</span></a></li>
+          </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+<section id="one" style="height: 100%;">
+	
+					<div style="margin-left: 20px;">	
+			
+					<header class="major">
+						
 							<h2>Easy Room</h2>
 						</header>
 						
@@ -437,7 +670,7 @@ deleteMarkers = function deleteMarkers() {
   clearMarkers();
 
   markers = [];
-
+add_moradia = undefined;
 }
 
 salvarMoradia = function salvarMoradia() {
@@ -449,7 +682,8 @@ salvarMoradia = function salvarMoradia() {
 if (add_moradia == undefined){window.alert("Clique em algum ponto do mapa para adicionar uma moradia!")}
 else{
 var req= "/addhouse/"+iduser+"/"+name_moradia+"/"+add_moradia+"/"+lat_moradia+"/"+lnt_moradia+"/"+img_moradia;
-window.alert(req);
+//window.alert(req);
+console.log(req);
 xmlHttp.open("GET",req, false);
 xmlHttp.send( null );
 window.alert(xmlHttp.responseText);
@@ -587,28 +821,31 @@ google.maps.event.addDomListener(window, 'load', initialize);
   <body>
 
   
+              <div class="box box-primary" style="width: 95%;">
+                <div class="box-header">
 
 	<fieldset style="width: 88%;">
 
 	
 
+	<form action="">
 		<legend>Preencha as informações abaixo referente a sua moradia:</legend>
 
    <div id="panel" style="display: none;">
 
-    <div>Insira um nome: </div><input id="box-nome-moradia" type="text" placeholder="Nome">
-
+                    <div class="form-group">
+    <label>Insira um nome: </label><input class="form-control" id="box-nome-moradia" type="text" placeholder="Nome">
+</div>
 	
 
 <p><p>
 
-    <div>Escolha o tipo de moradia: </div>
-
-	<form action="">
-
+                    <div class="form-group">
+    <label>Escolha o tipo de moradia: </label>
 
 
-</form>
+
+
 
 
 
@@ -635,18 +872,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <input type="radio" name="tipo-moradia" value="kitnet">Kitnet<img src='images/kitnet-icon.png' /><br>
 
   </div>
-
+</div>
   <div id="cleared"></div>
 
 </div>
 
 
+</form>
 
 
 
  </fieldset>	
 
 
+                    </div>
+                  </div><!-- /.box-body -->
 
 <p><p>
  
@@ -654,20 +894,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <!--  <div id="map-canvas"></div> 
     <input id="pac-input" class="controls" type="text" placeholder="Busque um endereço">  -->
 
-	<div id="panel2" style="display: none;" >
+	<div id="panel2" style="display: none; margin-left:40px;" >
 
 
-<a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a>
+<!-- <a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a> -->
 
-      <input onclick="salvarMoradia();" type=button value="Salvar Moradia">
+      <input onclick="salvarMoradia();" class="button" type=button value="Salvar Moradia">
 
-      <input onclick="deleteMarkers();" type=button value="Deletar Moradia"></div> 
+      <input onclick="deleteMarkers();" class="button" type=button value="Deletar Moradia"></div> 
 <p>
 
 
     
 <input id="pac-input" tyle="display: none;" lass="controls" type="text" placeholder="Busque um endereço">
-    <div id="map-canvas" style="height: 600px;"></div> </div>
+    <div id="map-canvas" style="height: 600px;  width: 95%;  margin-left:20px;"></div> </div>
 
   </body>
 
@@ -702,18 +942,29 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	    //localStorage.setItem("imageUrl", profile.getImageUrl());
        
             //window.alert('Bem Vindo ' + profile.getName() +"!");
-	if (profile.getImageUrl() ==  undefined){
+/*	if (profile.getImageUrl() ==  undefined){
 	    document.getElementById('imgavatar').setAttribute('src', "images/avatar2.jpg");} else {document.getElementById('imgavatar').setAttribute('src', profile.getImageUrl());}
 	    document.getElementById("h1profile").innerHTML = "<strong>Bem Vindo</strong> "+profile.getName()+",<br> navegue abaixo para conhecer o aplicativo.<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>";
 
+
+*/
+	    document.getElementById("username1").innerHTML = profile.getName(); 
+	    document.getElementById("username2").innerHTML = profile.getName() + "<small>"+ profile.getEmail() +"</small>"; 
+	    document.getElementById("username3").innerHTML = profile.getName(); 
+
+	if (profile.getImageUrl() ==  undefined){
+	    document.getElementById('imgavatar1').setAttribute('src', "images/avatar2.jpg");
+	    document.getElementById('imgavatar2').setAttribute('src', "images/avatar2.jpg");
+	    document.getElementById('imgavatar3').setAttribute('src', "images/avatar2.jpg");} 
+	else {
+		document.getElementById('imgavatar1').setAttribute('src', profile.getImageUrl());
+		document.getElementById('imgavatar2').setAttribute('src', profile.getImageUrl());
+		document.getElementById('imgavatar3').setAttribute('src', profile.getImageUrl());}
 	document.getElementById("panel").style.display = "block"
 
         document.getElementById("panel2").style.display = "block";
 
         document.getElementById("pac-input").style.display = "block";
-
-
-
 
   var xmlHttp = null;
 
@@ -752,13 +1003,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
     auth2.signOut().then(function () {
       console.log('User signed out.');
     });
- document.getElementById("h1profile").innerHTML = "<strong>Faça seu login</strong>, e começe<br> a usar o aplicativo agora mesmo!<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>.";
-	    document.getElementById('imgavatar').setAttribute('src', "images/avatar.jpg");
-document.getElementById("buttonvagas").style.display = "none";
-document.getElementById("buttonsair").style.display = "none";
-document.getElementById("buttonamigos").style.display = "none";
-document.getElementById("buttonmeuapt").style.display = "none"; 
+ 
+document.getElementById('imgavatar1').setAttribute('src',"images/avatar.png");
+		document.getElementById('imgavatar2').setAttribute('src',"images/avatar.png");
+		document.getElementById('imgavatar3').setAttribute('src',"images/avatar.png");
+	document.getElementById("panel").style.display = "none"
 
+        document.getElementById("panel2").style.display = "none";
+
+        document.getElementById("pac-input").style.display = "none";
+        window.location.href = "#";
   }
 </script>
 
@@ -766,388 +1020,34 @@ document.getElementById("buttonmeuapt").style.display = "none";
 </div>						</ul>
 
 
-					</section>
 
-				<!-- Two 
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
-					</section>
--->
+	  </div><!-- /.content-wrapper -->
 
-				<!-- Three -->
-							
-						
-				
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+          Anything you want
+        </div>
+        <!-- Default to the left --> 
+        <strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.
+      </footer>
 
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+    </div><!-- ./wrapper -->
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+    <!-- REQUIRED JS SCRIPTS -->
+    
+    <!-- jQuery 2.1.3 -->
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="6u 12u$(xsmall)">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(xsmall)">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button special">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button special small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="6u 12u$(small)">
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(small)">
-									<ul class="actions vertical small">
-										<li><a href="#" class="button special small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="6u 12u$(small)">
-									<ul class="actions vertical">
-										<li><a href="#" class="button special fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="6u$ 12u$(small)">
-									<ul class="actions vertical small">
-										<li><a href="#" class="button special small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button special">Special</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button big">Big</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button special fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button special fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button special icon fa-download">Icon</a></li>
-								<li><a href="#" class="button icon fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button special disabled">Special</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row uniform 50%">
-									<div class="6u 12u$(xsmall)">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="12u$">
-										<div class="select-wrapper">
-											<select name="demo-category" id="demo-category">
-												<option value="">- Category -</option>
-												<option value="1">Manufacturing</option>
-												<option value="1">Shipping</option>
-												<option value="1">Administration</option>
-												<option value="1">Human Resources</option>
-											</select>
-										</div>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="4u 12u$(small)">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="4u$ 12u(small)">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="6u 12u$(small)">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="6u$ 12u$(small)">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="12u$">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="12u$">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
-
-			</div>
-
-		<!-- Footer 
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="#">HTML5 UP</a></li>
-				</ul>
-			</footer>-->
-
-	</body>
+    <!-- <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script> -->
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
+    
+    <!-- Optionally, you can add Slimscroll and FastClick plugins. 
+          Both of these plugins are recommended to enhance the 
+          user experience -->
+  </body>
 </html>
