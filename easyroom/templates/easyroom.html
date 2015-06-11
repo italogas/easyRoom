@@ -40,13 +40,13 @@
 						<header class="major">
 							<h2>Easy Room</h2>
 						</header>
-						<p>Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade. A idéia é também funcionar como uma pequena rede social, pra ver o apt/num em que seus amigos moram, e criar uma interação entre moradores de um mesmo prédio, ou de prédios vizinhos.</p>
-						<ul class="actions">
+					<div id="inicio">	<p>Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade. A idéia é também funcionar como uma pequena rede social, pra ver o apt/num em que seus amigos moram, e criar uma interação entre moradores de um mesmo prédio, ou de prédios vizinhos.</p>
+				</div>		<ul class="actions">
 
 
 
 
-    <meta name="google-signin-client_id" content="210181327923-6uu8e7d3rdsutkbrbcac9hmkkva897dl.apps.googleusercontent.com" />
+    <meta name="google-signin-client_id" content="1078904266635-psl4d553svperv392ivr1dlr7dph6r7q.apps.googleusercontent.com" />
 <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript">
 
@@ -70,10 +70,11 @@
 	    //localStorage.setItem("imageUrl", profile.getImageUrl());
        
             //window.alert('Bem Vindo ' + profile.getName() +"!");
-	if (profile.getImageUrl() ==  undefined){
+/*	if (profile.getImageUrl() ==  undefined){
 	    document.getElementById('imgavatar').setAttribute('src', "images/avatar2.jpg");} else {document.getElementById('imgavatar').setAttribute('src', profile.getImageUrl());}
 	    document.getElementById("h1profile").innerHTML = "<strong>Bem Vindo</strong> "+profile.getName()+",<br> navegue abaixo para conhecer o aplicativo.<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>";
 
+ document.getElementById("inicio").innerHTML = "<p>Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade.</p><p style=\"text-indent: 2em;\"> Email: "+profile.getEmail()+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sexo: </p> <p style=\"text-indent: 2em;\"> Data Nascimento:</p>";
 	document.getElementById("buttonvagas").style.display = "block"
 
         document.getElementById("buttonmeuapt").style.display = "block";
@@ -82,8 +83,9 @@
 
 	document.getElementById("buttonsair").style.display = "block"; 
 
+*/
 
-
+        window.location.href = "/home";
   var xmlHttp = null;
 
         xmlHttp = new XMLHttpRequest();
@@ -109,8 +111,8 @@
 
 			<li><a href="#" id="buttonvagas" style="display: none" class="button">Buscar Vagas</a></li>
 
-<li><a href="#" id="buttonmeuapt" style="display: none" class="button">Meu predio</a></li>
-<li><a href="#" id="buttonamigos" style="display: none" class="button">Buscar Amigos</a></li>
+<li><a href="moradias" id="buttonmeuapt" style="display: none" class="button">Minhas Moradias</a></li>
+<li><a href="addmoradia" id="buttonamigos" style="display: none" class="button">Cadastrar Moradia</a></li>
 
 
 			<li><a href="#" id="buttonsair" style="display: none" class="button" onclick="signOut();">Sign out</a></li>
@@ -120,6 +122,9 @@
     auth2.signOut().then(function () {
       console.log('User signed out.');
     });
+
+document.getElementById("inicio").innerHTML = "<p>Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade. A idéia é também funcionar como uma pequena rede social, pra ver o apt/num em que seus amigos moram, e criar uma interação entre moradores de um mesmo prédio, ou de prédios vizinhos.</p>";
+
  document.getElementById("h1profile").innerHTML = "<strong>Faça seu login</strong>, e começe<br> a usar o aplicativo agora mesmo!<br> Mais informações: <a href=\"https://sites.google.com/site/grupo6easyroom/\">EASYROOM-UFCG</a>.";
 	    document.getElementById('imgavatar').setAttribute('src', "images/avatar.jpg");
 document.getElementById("buttonvagas").style.display = "none";
@@ -127,6 +132,7 @@ document.getElementById("buttonsair").style.display = "none";
 document.getElementById("buttonamigos").style.display = "none";
 document.getElementById("buttonmeuapt").style.display = "none"; 
 
+        window.location.href = "#";
   }
 </script>
 						</ul>

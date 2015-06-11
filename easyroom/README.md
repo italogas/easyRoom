@@ -1,35 +1,22 @@
-About PySlinky
+README EASY ROOM
 ========
 
-PySlinky is a simple web application to test and learn about autoscaling and scalability in general.    
-It was named after a very popular [toy](http://en.wikipedia.org/wiki/Slinky) which was basically a helical spring. It uses [Flask](http://flask.pocoo.org) and it's meant to test and learn how scalability on different approaches will work.
-The idea here is to stress the app enough to trigger autoscaling watches either by using the database or simply the server load. 
-A reverse proxy will be used to access this application.
+Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade. A idéia é também funcionar como uma pequena rede social, pra ver o apt/num em que seus amigos moram, e criar uma interação entre moradores de um mesmo prédio, ou de prédios vizinhos.
 
 Requirements
 ======
 
-*  [psutil](https://github.com/giampaolo/psutil)
-* [Flask](http://flask.pocoo.org)
+*  [flask](http://flask.pocoo.org/)
+
 * [netifaces]
 
 Services and Contents
-=======   
-Health requests
-   
-     GET /health/ 
-        returns the health since last checked
-     GET /health/1
-        returns current health 
+=======
+Client requests
 
-Load requests
-  
-     GET /load/
-        stresses the application using the default expression to evaluate (x**x)
-     GET /load/expression
-        stresses the application using the provided expression
+     GET /home/
+        returns the initial page
 
-Acknowledgement
-=========
+Server requests
 
-I would like to thank my friend bozo (vitor) helping me pick the name of this project :3.
+
