@@ -1,10 +1,18 @@
 # coding: utf-8
 import MySQLdb as mdb
 from TokenManager import *
+from DB_UserManager import *
 from util import *
 
-con = mdb.connect('localhost', 'ubuntu', 'citta14', 'easyroom');
-cur = con.cursor()
+#con = mdb.connect('localhost', 'ubuntu', 'citta14', 'easyroom');
+#cur = con.cursor()
+
+
+
+def conect():
+	con = mdb.connect('localhost', 'ubuntu', 'citta14', 'easyroom');
+	cur = con.cursor()
+	return con, cur
 
 def create_user_table():
         sql = """CREATE TABLE USER (
@@ -52,18 +60,22 @@ def create_vaga_table():
 
 
 def del_moradias(userid):
+	con, cur = conect()
 	sql = """DELETE FROM MORADIA WHERE IDDONO = """+userid
 	try:
         	cur.execute(sql)
 	        con.commit()
+		cur.close()
+		con.close()
 		return "Sucess"
 	except:
 		return "Error"
 
 
 ## Insert or update user in DB ##
-def update_user(id, name="NULL", imgurl="NULL", email="NULL", idmoradia="NULL", date_birth="NULL", sex="NULL"):
-	l = [('id', id),('name', name), ('imgurl', imgurl), ('email', email), ('idmoradia', idmoradia),('date_birth',  date_birth), ('sex', sex)]
+def update_user(id, name="NULL", imgurl="NULL", email="NULL", phone="NULL", date_birth="NULL", sex="NULL"):
+        con, cur = conect()
+	l = [('id', id),('name', name), ('imgurl', imgurl), ('email', email), ('phone', phone),('date_birth',  date_birth), ('sex', sex)]
 	l1 = [(atid, "'"+attr+"'") for (atid, attr) in l if attr != "NULL"]
 	l2 = [(atid, attr) for (atid, attr) in l if attr == "NULL"]
 	l = l1+l2
@@ -72,12 +84,15 @@ def update_user(id, name="NULL", imgurl="NULL", email="NULL", idmoradia="NULL", 
 		dic_att[key] = value
 	
 	#print dic_att
-	update  = """ON DUPLICATE KEY UPDATE name=%s, imgurl=%s, idmoradia=%s"""%(dic_att['name'], dic_att['imgurl'], dic_att['idmoradia'])
-	sql = """INSERT INTO USER (id, name, imgurl, email, idmoradia, date_birth, sex ) VALUES(%s, %s, %s, %s, %s, %s, %s) """%(dic_att['id'], dic_att['name'], dic_att['imgurl'], dic_att['email'], dic_att['idmoradia'], dic_att['date_birth'], dic_att['sex'])
+	update  = """ON DUPLICATE KEY UPDATE name=COALESCE(name, %s), imgurl=%s"""%(dic_att['name'], dic_att['imgurl'])
+	sql = """INSERT INTO USER (id, name, imgurl, email, phone, date_birth, sex ) VALUES(%s, %s, %s, %s, %s, %s, %s) """%(dic_att['id'], dic_att['name'], dic_att['imgurl'], dic_att['email'], dic_att['phone'], dic_att['date_birth'], dic_att['sex'])
 	#print (sql+update)
 	try:
 		cur.execute(sql+update)
 		con.commit()
+                cur.close()
+                con.close()
+
 		return "Ok, success."
 	except:
 		return "Error."
@@ -85,39 +100,64 @@ def update_user(id, name="NULL", imgurl="NULL", email="NULL", idmoradia="NULL", 
 
 ## Get all users from DB ##
 def get_all_users():
+        con, cur = conect()
+
 	sql = "SELECT name, id FROM USER"
 	cur.execute(sql)
 	rows = cur.fetchall()
+	cur.close()
+	con.close()
 
        	return rows
         
 def get_user_atts(id):
-	sql = "SELECT * FROM USER WHERE id='%s'"%id
+        con, cur = conect()
+        sql_init = "SET group_concat_max_len=15000;"
+
+	sql = '''SELECT 
+ GROUP_CONCAT(CONCAT('{"id": "', id, '", "name": "', name, 
+        '", "imgurl": "', COALESCE(imgurl, ""),
+        '", "date_birth": "', COALESCE(date_birth, ""),
+        '", "phone": "', COALESCE(phone, ""),
+        '", "sex": "', COALESCE(sex, ""),
+        '"}')        
+        ) AS json FROM USER WHERE id='%s' '''%id
+	cur.execute(sql_init)
 	cur.execute(sql)
         rows = cur.fetchall()
+	cur.close()
+	con.close()
+
 	return rows
 
 ## Get all m from DB ##
 def get_all_houses():
-        sql = "SELECT * FROM MORADIA"
+	con, cur = conect()        
+	sql = "SELECT * FROM MORADIA"
         cur.execute(sql)
         rows = cur.fetchall()
 	out = str(rows)
-	#print decodeLatin(out)
+        cur.close()
+        con.close()
+
 	return decodeLatin(out)
 
 ## Get all vacancy from DB ##
 def get_all_vacancys():
+	con, cur = conect()
         sql = "SELECT * FROM VAGA"
         cur.execute(sql)
         rows = cur.fetchall()
         out = str(rows)
-        #print decodeLatin(out)
-        return decodeLatin(out)
+	cur.close()
+        con.close()
+        
+	return decodeLatin(out)
 
 
 
 def get_house_user(id):
+	con, cur = conect()
         sql = "SELECT CONCAT('<tr id=\"', id, '\"> <td>',name,'</td><td>','</td><td>', address, '</td><td>',imgurl, '</td> <td><a  id=\"addVaga\" class=\"button\" onclick=\"addVaga{', id, '}', '\">Add Vaga</a> </td></tr>') FROM MORADIA  WHERE iddono='%s'"%id
         cur.execute(sql)
         rows = cur.fetchall()
@@ -128,6 +168,7 @@ def get_house_user(id):
 
 ## Insert house on DB ##
 def add_house(id=id_generator(20), name="NULL", iduser="NULL", address="NULL", lat="NULL", lng="NULL", imgurl="NULL"):
+	con, cur = conect()
         l = [('id', id),('name', name), ('iddono', iduser), ('address', address), ('lat', lat),('lng', lng), ('imgurl', imgurl)]
         l1 = [(atid, "'"+attr+"'") for (atid, attr) in l if attr != "NULL"]
         l2 = [(atid, attr) for (atid, attr) in l if attr == "NULL"]
@@ -143,13 +184,16 @@ def add_house(id=id_generator(20), name="NULL", iduser="NULL", address="NULL", l
         try:
         	cur.execute(sql)
 	        con.commit()
+		cur.close()
+	        con.close()
         	return "Ok, success."
         except:
                 return "Error."
 
 ## Insert vacancy on DB ##
 def add_vaga(id=id_generator(20), price="NULL", idmoradia="NULL", tel="NULL", description="NULL", status="ABERTA"):
-        l = [('id', id),('price', price), ('idmoradia', idmoradia), ('tel', tel), ('description', description), ('status',status)]
+        con, cur = conect()
+	l = [('id', id),('price', price), ('idmoradia', idmoradia), ('tel', tel), ('description', description), ('status',status)]
         l1 = [(atid, "'"+attr+"'") for (atid, attr) in l if attr != "NULL"]
         l2 = [(atid, attr) for (atid, attr) in l if attr == "NULL"]
         l = l1+l2
@@ -164,9 +208,41 @@ def add_vaga(id=id_generator(20), price="NULL", idmoradia="NULL", tel="NULL", de
         try:
                 cur.execute(sql)
                 con.commit()
+		cur.close()
+        	con.close()
                 return "Ok, success."
         except:
                 return "Error."
+
+
+
+def get_moradias_coordenadas(lat1, lng1, lat2, lng2):
+	con, cur = conect()
+        sql_init = "SET group_concat_max_len=15000;"
+        sql = '''
+        SELECT GROUP_CONCAT(CONCAT('{"name": "', name, '", "address": "', address, 
+        '", "lat": "', lat,
+        '", "lng": "', lng,
+        '", "imgurl": "', imgurl,
+        '"}')        
+        ) AS json FROM MORADIA WHERE ((lat+0) BETWEEN %s AND %s) AND ((lng+0) BETWEEN %s AND %s)'''%(lat1, lat2, lng1, lng2)
+
+        #print sql
+        try:
+                cur.execute(sql_init)
+                cur.execute(sql)
+                rows = cur.fetchall()
+		cur.close()
+	        con.close()
+
+                return rows
+
+        except:
+                return "Error."
+
+
+
+
 
 
 def main():
@@ -180,3 +256,6 @@ def main():
 #create_moradia_table()
 #print get_all_vacancys()
 #print get_house_user("106816106609413634823")
+#print update_user_att(u'123', u'antonio teste1111', 'NULL', 'NULL', 'NULL')
+#print get_user_atts('123')
+#print get_all_users()

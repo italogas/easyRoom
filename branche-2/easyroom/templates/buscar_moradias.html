@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="/home" class="logo"><b>EasyRoom</b></a>
+        <a href="#" class="logo"><b>EasyRoom</b></a>
 
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -242,12 +242,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Optionally, you can add icons to the links -->
             <li  ><a href="/home" target="_self" >
 	<i class="fa fa-laptop"></i><span>Início</span></a></li>
-            <li><a href="/buscarmoradia" target="_self" >
+            <li class="active"><a href="/buscarmoradia" target="_self" >
 	<i class="fa fa-book"></i><span>Buscar Moradias</span></a></li>
             <li><a href="/addmoradia" target="_self" >
 	<i class="fa fa-edit"></i><span>Adicionar Moradia</span></a></li> 
-            <li class="active"><a href="/moradias" target="_self" >
-		 <i class="fa fa-th"></i><span>Minhas Moradias</span></a></li>
+            <li><a  href="/moradias" target="_self" >
+	 <i class="fa fa-th"></i><span>Minhas Moradias</span></a></li>
             <li><a href="/home" target="_self" >
 	<i class="fa fa-book"></i><span>Buscar Vagas</span></a></li>
         <!--    <li class="treeview">
@@ -279,17 +279,183 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
+  <head>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <meta charset="utf-8">
+
+	
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js">
+
+</script>
+
+<!--		<link rel="stylesheet" type="text/css" href="css/moradia.css" /> -->
+
+    <style>
+
+      html, body, #map-canvas {
+
+        height: 100%;
+
+        width: 100%;
+
+        margin: 0px;
+
+        padding: 0px
+
+      }
+
+	     #panel {
+
+        
+
+        
+
+      }
+
+      .controls {
+
+        margin-top: 16px;
+
+        border: 1px solid transparent;
+
+        border-radius: 2px 0 0 2px;
+
+        box-sizing: border-box;
+
+        -moz-box-sizing: border-box;
+
+        height: 32px;
+
+        outline: none;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+      }
+
+
+
+      #pac-input {
+
+        background-color: #fff;
+
+        font-family: Roboto;
+
+        font-size: 15px;
+
+        font-weight: 300;
+
+        margin-left: 12px;
+
+        padding: 0 11px 0 13px;
+
+        text-overflow: ellipsis;
+
+        width: 400px;
+
+      }
+
+
+
+      #pac-input:focus {
+
+        border-color: #4d90fe;
+
+      }
+
+
+
+      .pac-container {
+
+        font-family: Roboto;
+
+      }
+
+
+
+      #type-selector {
+
+        color: #fff;
+
+        background-color: #4d90fe;
+
+        padding: 5px 11px 0px 11px;
+
+      }
+
+
+
+      #type-selector label {
+
+        font-family: Roboto;
+
+        font-size: 13px;
+
+        font-weight: 300;
+
+      }
+
+
+
+    </style>
+
+	    <style>
+
+      #target {
+
+        width: 345px;
+
+      }
+
+#wrapper {
+
+  margin-left: 200px;
+
+}
+
+#content {
+
+  float: right;
+
+  width: 60%;
+
+}
+
+#sidebar {
+
+  float: left;
+
+  width: 200px;
+
+  margin-left: -200px;
+
+}
+
+#cleared {
+
+  clear: both;
+
+}
+
+</style>
+
+	
+
+    <title>Places search box</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+
+    <script src="js/buscar_moradias.js"></script>
+
+
+  </head>
+
   <body>
 
-          <div class="box box-primary" style="width: 95%;">
-			  	  <div class="box-header">
-                  <div>Aplicativo web para procurar vagas em apartamento, onde um usuário ou dono do local (casa, apartamento, república, kitnet, pensionato), tem uma vaga pra alugar e insere no sistema, através da api do google maps o usuário pode ver os apts disponíveis na cidade. A idéia é também funcionar como uma pequena rede social, pra ver o apt/num em que seus amigos moram, e criar uma interação entre moradores de um mesmo prédio, ou de prédios vizinhos.</div>
   
-    
-                </div>
-                </div>
-                
-          <div class="box box-primary" style="width: 95%;">
+              <div class="box box-primary" style="width: 95%;">
                 <div class="box-header">
 
 	<fieldset style="width: 88%;">
@@ -297,9 +463,51 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	
 
 	<form action="">
-		<legend>Minhas Moradias</legend>
+		<legend>Busque um endereço e visualize as moradias disponiveis:</legend>
 
-<div id="panelmoradias"></div>
+   <div id="panel" style="display: none;">
+
+	
+
+<p><p>
+
+<!--                    <div class="form-group">
+    <label>Escolha o tipo de moradia: </label>
+
+
+
+
+
+
+
+
+
+<div id="wrapper">
+
+  <div id="content">
+
+ <input type="radio" name="tipo-moradia" value="apt">Apartamento<img src='images/apt-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="pensionato">Pensionato<img src='images/pensionato-icon.png' />
+
+  </div>
+
+  <div id="sidebar">
+
+  
+
+  <input type="radio" name="tipo-moradia" value="casa" checked="checked">Casa<img src='images/casa-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="republica">República<img src='images/republica-icon.png' /><br>
+
+<input type="radio" name="tipo-moradia" value="kitnet">Kitnet<img src='images/kitnet-icon.png' /><br>
+
+  </div>
+</div>
+  <div id="cleared"></div>-->
+
+</div>
+
 
 </form>
 
@@ -320,11 +528,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<div id="panel2" style="display: none; margin-left:40px;" >
 
 
-<!-- <a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a> -->
+<!-- <a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a> 
 
-<!--      <input onclick="updateDados();" class="button" type=button value="Atualizar dados">-->
+      <input onclick="salvarMoradia();" class="button" type=button value="Salvar Moradia">
+
+      <input onclick="deleteMarkers();" class="button" type=button value="Deletar Moradia">
+--></div> 
 <p>
 
+
+    
+<input id="pac-input" tyle="display: none;" lass="controls" type="text" placeholder="Busque um endereço">
+    <div id="map-canvas" style="height: 600px;  width: 95%;  margin-left:20px;"></div> </div>
 
   </body>
 
@@ -350,7 +565,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
       
-   /* 
+	/*
 	    document.getElementById("username1").innerHTML = profile.getName(); 
 	    document.getElementById("username2").innerHTML = profile.getName() + "<small>"+ profile.getEmail() +"</small>"; 
 	    document.getElementById("username3").innerHTML = profile.getName(); 
@@ -363,25 +578,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		document.getElementById('imgavatar1').setAttribute('src', profile.getImageUrl());
 		document.getElementById('imgavatar2').setAttribute('src', profile.getImageUrl());
 		document.getElementById('imgavatar3').setAttribute('src', profile.getImageUrl());}
-//	document.getElementById("panel").style.display = "block"
+	document.getElementById("panel").style.display = "block"
 
         document.getElementById("panel2").style.display = "block";
 
-        //document.getElementById("pac-input").style.display = "block";
-
-
-  var xmlHttp = null;
-
-        xmlHttp = new XMLHttpRequest();
-
-var req= "/getmoradia/"+profile.getId();
-xmlHttp.open("GET",req, false);
-xmlHttp.send( null );
-var x = decodeURI(xmlHttp.responseText);
-text = x;
-//console.log(text.substring(1));
-document.getElementById("panelmoradias").innerHTML = text;
-
+        document.getElementById("pac-input").style.display = "block";
 
   var xmlHttp = null;
 
@@ -390,9 +591,9 @@ document.getElementById("panelmoradias").innerHTML = text;
         xmlHttp.open("GET","/updateuser/"+profile.getId()+"/"+profile.getName()+"/"+profile.getEmail(),false);
 
     xmlHttp.send( null );
-          
 
-	xmlHttp = new XMLHttpRequest();
+
+	 xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET","/getuser/"+profile.getId(),false);
         xmlHttp.send( null );
         //window.alert(xmlHttp.responseText);
@@ -406,7 +607,7 @@ document.getElementById("panelmoradias").innerHTML = text;
             document.getElementById("username2").innerHTML = user[0].name + "<small>"+ profile.getEmail() +"</small>";
             document.getElementById("username3").innerHTML = user[0].name;
 
-  
+            
         };
     </script>
 </head>
@@ -422,14 +623,8 @@ document.getElementById("panelmoradias").innerHTML = text;
 </body>
 <br><br>
  
-<!--
-			<li><a href="#" id="buttonvagas" style="display: none" class="button">Buscar Vagas</a></li>
 
-<li><a href="#" id="buttonmeuapt" style="display: none" class="button">Meu predio</a></li>
-<li><a href="#" id="buttonamigos" style="display: none" class="button">Buscar Amigos</a></li>
--->
-
-		<!--	<li><a href="#" id="buttonsair" style="display: none" class="button" onclick="signOut();">Sign out</a></li>  -->
+			<li><a href="#" id="buttonsair" style="display: none" class="button" onclick="signOut();">Sign out</a></li>
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -440,63 +635,13 @@ document.getElementById("panelmoradias").innerHTML = text;
 document.getElementById('imgavatar1').setAttribute('src',"images/avatar.png");
 		document.getElementById('imgavatar2').setAttribute('src',"images/avatar.png");
 		document.getElementById('imgavatar3').setAttribute('src',"images/avatar.png");
-//	document.getElementById("panel").style.display = "none"
+	document.getElementById("panel").style.display = "none"
 
         document.getElementById("panel2").style.display = "none";
 
-        //document.getElementById("pac-input").style.display = "none";
+        document.getElementById("pac-input").style.display = "none";
         window.location.href = "#";
   }
-  
-
-salvarVaga = function salvarVaga(id){
-
-var price = document.getElementById('box-reco').value;
-var tel = document.getElementById('box-fone').value;
-var descr = document.getElementById('box-desc').value;
-
-var req= "/addvaga/"+id+"/"+price+"/"+tel+"/"+descr;
-
-
- document.getElementById("div_vagas").remove();
-
-
-  var xmlHttp = null;
-
-        xmlHttp = new XMLHttpRequest();
-
-
-
-
-xmlHttp.open("GET",req, false);
-xmlHttp.send( null );
-window.alert(xmlHttp.responseText);
-
-}
-
-cancelarVaga = function cancelarVaga(){
-
-var price = document.getElementById('box-reco').value;
-var tel = document.getElementById('box-fone').value;
-var descr = document.getElementById('box-desc').value;
-document.getElementById("div_vagas").remove();
-
-
-
-}
-
-
-
-
-addVaga = function addVaga(id) {
-    var x=document.getElementById(id).cells
-   var y = (x[2].innerHTML)
-//window.alert(id)
-    x[2].innerHTML = y+"<div id=\"div_vagas\">Informações da Vaga: <p><p>    <div>Preço: </div><input id=\"box-reco\" type=\"text\" pattern=\"^\d+(\.|\,)\d{2}$\" placeholder=\"Preço\">     <div>Telefone pra contato: </div><input id=\"box-fone\" type=\"text\" placeholder=\"Telefone\"> <p></p>  Descrição: <input id=\"box-desc\" style=\"  height: 80px\" type=\"text\" placeholder=\"Detalhes &#10; da vaga\">  <p></p>   <input onclick=\"salvarVaga('" + id+"');\" type=button value=\"Salvar Vaga\"><input onclick=\"cancelarVaga();\" type=button value=\"Cancelar\"></div>"
-}
-
-
- 
 </script>
 
 
@@ -534,3 +679,4 @@ addVaga = function addVaga(id) {
           user experience -->
   </body>
 </html>
+
