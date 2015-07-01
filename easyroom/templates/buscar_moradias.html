@@ -242,9 +242,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Optionally, you can add icons to the links -->
             <li  ><a href="/home" target="_self" >
 	<i class="fa fa-laptop"></i><span>Início</span></a></li>
-            <li><a href="/buscarmoradia" target="_self" >
+            <li class="active"><a href="/buscarmoradia" target="_self" >
 	<i class="fa fa-book"></i><span>Buscar Moradias</span></a></li>
-            <li class="active"><a href="/addmoradia" target="_self" >
+            <li><a href="/addmoradia" target="_self" >
 	<i class="fa fa-edit"></i><span>Adicionar Moradia</span></a></li> 
             <li><a  href="/moradias" target="_self" >
 	 <i class="fa fa-th"></i><span>Minhas Moradias</span></a></li>
@@ -447,7 +447,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 
-    <script src="js/add_moradias.js"></script>
+    <script src="js/buscar_moradias.js"></script>
 
 
   </head>
@@ -463,18 +463,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	
 
 	<form action="">
-		<legend>Preencha as informações abaixo referente a sua moradia:</legend>
+		<legend>Busque um endereço e visualize as moradias disponiveis:</legend>
 
    <div id="panel" style="display: none;">
 
-<div class="form-group">
-    <label>Insira um nome: </label><input class="form-control" id="box-nome-moradia" type="text" placeholder="Nome">
-</div>
 	
 
 <p><p>
 
-                    <div class="form-group">
+<!--                    <div class="form-group">
     <label>Escolha o tipo de moradia: </label>
 
 
@@ -507,7 +504,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   </div>
 </div>
-  <div id="cleared"></div>
+  <div id="cleared"></div>-->
+  <div id="wrapper">
+  
+  <label>Tipo:</label>
+  
+   <select name="tipo" id="tipo" onchange="buscar_moradias()">
+    
+      <option value="0">Todos</option>
+      <option value="1">Casa</option>
+      <option value="2">Republica</option>
+      <option value="3">Pensionato</option>
+      <option value="4">Kitnet</option>
+      <option value="5">Apartamento</option>
+  
+   </select>
+  </div>
 
 </div>
 
@@ -531,11 +543,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<div id="panel2" style="display: none; margin-left:40px;" >
 
 
-<!-- <a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a> -->
+<!-- <a href="#" id="buttonvoltar" target="_self"  class="button">Voltar</a> 
 
       <input onclick="salvarMoradia();" class="button" type=button value="Salvar Moradia">
 
-      <input onclick="deleteMarkers();" class="button" type=button value="Deletar Moradia"></div> 
+      <input onclick="deleteMarkers();" class="button" type=button value="Deletar Moradia">
+--></div> 
 <p>
 
 
@@ -567,11 +580,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
       
-/*
+	/*
 	    document.getElementById("username1").innerHTML = profile.getName(); 
 	    document.getElementById("username2").innerHTML = profile.getName() + "<small>"+ profile.getEmail() +"</small>"; 
 	    document.getElementById("username3").innerHTML = profile.getName(); 
-*/
+	*/
 	if (profile.getImageUrl() ==  undefined){
 	    document.getElementById('imgavatar1').setAttribute('src', "images/avatar2.jpg");
 	    document.getElementById('imgavatar2').setAttribute('src', "images/avatar2.jpg");
@@ -593,10 +606,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         xmlHttp.open("GET","/updateuser/"+profile.getId()+"/"+profile.getName()+"/"+profile.getEmail(),false);
 
     xmlHttp.send( null );
-  
 
 
-	xmlHttp = new XMLHttpRequest();
+	 xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET","/getuser/"+profile.getId(),false);
         xmlHttp.send( null );
         //window.alert(xmlHttp.responseText);
@@ -610,7 +622,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             document.getElementById("username2").innerHTML = user.name + "<small>"+ profile.getEmail() +"</small>";
             document.getElementById("username3").innerHTML = user.name;
 
-          
+            
         };
     </script>
 </head>
@@ -682,3 +694,4 @@ document.getElementById('imgavatar1').setAttribute('src',"images/avatar.png");
           user experience -->
   </body>
 </html>
+

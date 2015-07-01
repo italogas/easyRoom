@@ -242,14 +242,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Optionally, you can add icons to the links -->
             <li  ><a href="/home" target="_self" >
 	<i class="fa fa-laptop"></i><span>Início</span></a></li>
-            <li><a href="/home" target="_self" >
-	<i class="fa fa-book"></i><span>Buscar Vaga</span></a></li>
+            <li><a href="/buscarmoradia" target="_self" >
+	<i class="fa fa-book"></i><span>Buscar Moradias</span></a></li>
             <li><a href="/addmoradia" target="_self" >
 	<i class="fa fa-edit"></i><span>Adicionar Moradia</span></a></li> 
             <li class="active"><a href="/moradias" target="_self" >
 		 <i class="fa fa-th"></i><span>Minhas Moradias</span></a></li>
             <li><a href="/home" target="_self" >
-	<i class="fa fa-book"></i><span>Buscar Moradias</span></a></li>
+	<i class="fa fa-book"></i><span>Buscar Vagas</span></a></li>
         <!--    <li class="treeview">
               <a href="#"><span>Moradias</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
@@ -303,6 +303,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <table id="table-moradias"class="table table-striped">
 
   </table>
+
 </div>
 
 </form>
@@ -342,23 +343,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script type="text/javascript">
 
+  function drawTable(data) {
+    console.log(data);
+    var array = [];
+    array = JSON.parse(data);
+    
+    
+    var tam = array.moradias.length;
+    for (var i = 0; i < tam; i++) {
+        drawRow(array.moradias[i]);
+    }
+  }
+
+    function drawRow(rowData) {
+    var row = $("<tr />").attr('id',rowData.id);
+     //this will append tr element to table... keep its reference for a while since we will add cels into it
+    $("#table-moradias").append(row);
+    var nome = rowData.nome==='undefined' || rowData.nome===null ? "Vazio" : rowData.nome;
+    row.append($("<td>" + nome + "</td>"));
+    row.append($("<td>" + rowData.address + "</td>"));
+    var linkAdd = "<a  id='addVaga' class='button' onclick='addVaga("+ rowData.id+ ")' >Add Vaga</a>";
+    row.append($("<td>" + linkAdd + "</td>"));
+  }
+
+
+
         var saySomething = function() {
             window.alert("Welcome to EasyRoom!");
         };
         //gapi.auth2.init().fecth_basic_profile = true;
         var onSignIn = function (googleUser) {
             var profile = googleUser.getBasicProfile();
-	          iduser = profile.getId();
+	iduser = profile.getId();
             console.log('ID: ' + profile.getId());
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
             console.log('Email: ' + profile.getEmail());
       
-    
+   /* 
 	    document.getElementById("username1").innerHTML = profile.getName(); 
 	    document.getElementById("username2").innerHTML = profile.getName() + "<small>"+ profile.getEmail() +"</small>"; 
 	    document.getElementById("username3").innerHTML = profile.getName(); 
-
+	*/
 	if (profile.getImageUrl() ==  undefined){
 	    document.getElementById('imgavatar1').setAttribute('src', "images/avatar2.jpg");
 	    document.getElementById('imgavatar2').setAttribute('src', "images/avatar2.jpg");
@@ -376,14 +402,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   var xmlHttp = null;
 
-  xmlHttp = new XMLHttpRequest();
+        xmlHttp = new XMLHttpRequest();
 
 var req= "/getmoradia/"+profile.getId();
 xmlHttp.open("GET",req, false);
 xmlHttp.send( null );
 var x = decodeURI(xmlHttp.responseText);
+text = x;
+var x = decodeURI(xmlHttp.responseText);
+
+
+
+
+
+
+
 drawTable(x);
-//text = x;
+
 //console.log(text.substring(1));
 //document.getElementById("panelmoradias").innerHTML = text;
 
@@ -395,8 +430,24 @@ drawTable(x);
         xmlHttp.open("GET","/updateuser/"+profile.getId()+"/"+profile.getName()+"/"+profile.getEmail(),false);
 
     xmlHttp.send( null );
-            
-  };
+          
+
+	xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET","/getuser/"+profile.getId(),false);
+        xmlHttp.send( null );
+        //window.alert(xmlHttp.responseText);
+        var user = xmlHttp.responseText;
+        //user = user.substring(3, user.length-5);//.replace(/'/g, "").split(",");
+//      window.alert(user);
+        user = JSON.parse(user);
+        
+        
+            document.getElementById("username1").innerHTML = user.name;//profile.getName();
+            document.getElementById("username2").innerHTML = user.name + "<small>"+ profile.getEmail() +"</small>";
+            document.getElementById("username3").innerHTML = user.name;
+
+  
+        };
     </script>
 </head>
 <!--<body style="background-color: lightgrey">
@@ -420,30 +471,6 @@ drawTable(x);
 
 		<!--	<li><a href="#" id="buttonsair" style="display: none" class="button" onclick="signOut();">Sign out</a></li>  -->
 <script>
-  
-  function drawTable(data) {
-    console.log(data);
-    var array = [];
-    array = JSON.parse(data);
-    
-    
-    var tam = array.moradias.length;
-    for (var i = 0; i < tam; i++) {
-        drawRow(array.moradias[i]);
-    }
-  }
-
-  function drawRow(rowData) {
-    var row = $("<tr />").attr('id',rowData.id);
-     //this will append tr element to table... keep its reference for a while since we will add cels into it
-    $("#table-moradias").append(row);
-    var nome = rowData.nome==='undefined' || rowData.nome===null ? "Vazio" : rowData.nome;
-    row.append($("<td>" + nome + "</td>"));
-    row.append($("<td>" + rowData.address + "</td>"));
-    var linkAdd = "<a  id='addVaga' class='button' onclick='addVaga("+ rowData.id+ ")' >Add Vaga</a>";
-    row.append($("<td>" + linkAdd + "</td>"));
-  }
-
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {

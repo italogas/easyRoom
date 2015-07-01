@@ -1,0 +1,83 @@
+# coding: utf-8
+from app import db, models
+import config
+from functools import wraps
+import json
+import datetime
+from util import *
+from sqlalchemy.exc import IntegrityError
+
+
+def jsonify(f):
+    @wraps(f)
+    def _wrapped(*args, **kwargs):
+        from flask import jsonify as flask_jsonify
+        try:
+            result_dict = f(*args, **kwargs)
+        except Exception as e:
+            result_dict = dict(success=False)
+            result_dict['content'] = 'Operation failed: ' + e.message
+            if True:
+                from traceback import format_exc
+                result_dict['exc_info'] = format_exc(e)
+        return flask_jsonify(**result_dict)
+    return _wrapped
+
+def update_user_att(id, name="NULL", imgurl=None, email=None, date_birth="01/01/1900", sex=None, phone=None):
+    
+    u = models.User.query.filter_by(oAuthId=id).first()
+    
+    #print date_
+    try:
+
+        if u is None:
+            
+            u = models.User(oAuthId=id,name=name, email=email)
+            db.session.add(u)
+            db.session.commit() 
+        
+            return 'OK'
+        else:
+            date_ = datetime.datetime.strptime(date_birth, '%Y-%m-%d').date()
+            u.name = name
+            u.imgurl = imgurl
+            #u.email = email
+            u.date_birth = date_
+            u.sex = sex
+            u.phone = phone
+            db.session.commit()
+        
+            return 'OK'
+    except IntegrityError as e:
+        db.session.rollback()
+        print "I/O error({0}): {1}".format(e.params, e.orig)
+        return 'Error'
+
+## Insert or update user in DB ##
+#def update_user_att(id, name="NULL", imgurl="NULL", date_birth="NULL", phone="NULL", sex="NULL"):
+	con, cur = conect()
+        l = [('id', id),('name', name), ('imgurl', imgurl), ('date_birth',  date_birth), ('phone', phone), ('sex', sex)]
+        l1 = [(atid, "'"+attr+"'") for (atid, attr) in l if attr != "NULL"]
+        l2 = [(atid, attr) for (atid, attr) in l if attr == "NULL"]
+        l = l1+l2
+        dic_att = {}
+        for (key, value) in l:
+                dic_att[key] = value
+
+        #print dic_att
+        sql = """
+		UPDATE USER
+		SET name = coalesce(%s, name), imgurl = coalesce(%s, imgurl), date_birth = coalesce(%s, date_birth),  phone = coalesce(%s, phone), sex = coalesce(%s, sex)
+		WHERE
+		    id = %s"""%(dic_att['name'], dic_att['imgurl'], dic_att['date_birth'], dic_att['phone'], dic_att['sex'], dic_att['id'])
+        #print (sql)
+        try:
+		cur = con.cursor()
+                cur.execute(sql)
+                con.commit()
+		cur.close()
+		con.close()
+                return "Ok, success."
+        except:
+                return "Error."
+#print update_user_att(u'123', u'antonio teste', 'NULL', 'NULL', 'NULL')#(id='123', name='usuario 1')

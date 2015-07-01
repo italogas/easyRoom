@@ -8,6 +8,7 @@ class User(db.Model):
     name = db.Column(db.String(64),nullable=False)
     email = db.Column(db.String(120), index=True,nullable=False,unique=True)
     imgurl = db.Column(db.String(120))
+    phone = db.Column(db.String(13))
     date_birth = db.Column(db.DateTime)
     sex = db.Column(db.String(1))
     moradias = db.relationship('Moradia', backref='dono', lazy='dynamic')
